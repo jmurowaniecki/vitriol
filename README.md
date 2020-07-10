@@ -1,11 +1,11 @@
 # 🜖 Alchemic/Astronomical keyboard mapping
 
-[ico-codacy ]: https://img.shields.io/codacy/grade/%CODACY-TOKEN%?logo=codacy&logoColor=green&style=flat-square
-[ico-styleci]: https://github.styleci.io/repos/%STYLECI-TOKEN%/shield
+[ico-codacy ]: https://img.shields.io/codacy/grade/b002e2f9f0ad4ffb9ec5676789918b61?logo=codacy&logoColor=green&style=flat-square
+[ico-styleci]: https://github.styleci.io/repos/278512720/shield?branch=master
 [ico-version]: https://img.shields.io/github/v/tag/jmurowaniecki/vitriol?sort=semver&style=flat-square
-[ico-codecli]: https://api.codeclimate.com/v1/badges/%CODECLIMATE-TOKEN%/maintainability
+[ico-codecli]: https://api.codeclimate.com/v1/badges/bb01325f8a84fc9fba31/maintainability
 [url-codacy ]: https://www.codacy.com/app/jmurowaniecki/vitriol
-[url-styleci]: https://github.styleci.io/repos/%STYLECI-TOKEN%
+[url-styleci]: https://github.styleci.io/repos/278512720
 [url-codecli]: https://codeclimate.com/github/jmurowaniecki/vitriol/maintainability
 
 [![StyleCI    ][ico-styleci]][url-styleci]
@@ -13,7 +13,8 @@
 [![Codeclimate][ico-codecli]][url-codecli]
 [![Version    ][ico-version]](#)
 
-V.I.T.R.I.O.L.
+
+<!-- V.I.T.R.I.O.L. -->
 
 ## Installation
 

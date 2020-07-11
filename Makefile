@@ -19,7 +19,11 @@ HLP = sed -E 's/(`.*`)/\\e[1m\1\\e[0m/'
 
 SYMBOL= symbols/br
 RULES = rules/evdev.lst \
-		rules/evdev.xml
+		rules/evdev.xml \
+		rules/evdev     \
+		rules/base.lst  \
+		rules/base.xml  \
+		rules/base
 FILES = $(RULES) \
 		$(SYMBOL)
 
@@ -29,17 +33,22 @@ TARGETS = $(foreach target, $(FILES), $(wildcard $(TARGET)/$(target)))
 
 DEFAULT: help
 
+
+
 backup:
 	@\
-	$(foreach target, $(TARGETS), \
-		cp  $(target) $(target)_$(shell date +'%Y%m%d%H%M%S');)
+	$(foreach    target, $(TARGETS), \
+		cp $(target) $(target)_$(shell date +'%Y%m%d%H%M%S');)
 
 
 #
 install: backup # Installs application.
 	@\
+	LST=$(TARGET)/rules/evdev.lst; \
 	cat $(SOURCE) >> $(TARGET)/$(SYMBOL); \
-	cat evdev.lst >> $(TARGET)/rules/evdev.lst
+	cat evdev.lst >> \
+	""""$(LST)"""""";\
+	cp  $(LST)"""""" $(TARGET)/rules/base.lst
 
 	@\
 	PICK_SIZE=$$(cat $(TARGET)/rules/evdev.xml | wc -l); \
@@ -49,11 +58,12 @@ install: backup # Installs application.
 	PICK_LAST=$$((PICK_SIZE - PICK_LINE)); \
 	PICK_INIT=$$(head $(TARGET)/rules/evdev.xml -n$$PICK_LINE); \
 	PICK_DONE=$$(tail $(TARGET)/rules/evdev.xml -n$$PICK_LAST); \
-	echo "$${PICK_INIT}\n$$(cat evdev.xml)\n$${PICK_DONE}" > .evdev.tmp.xml
+	echo "$${PICK_INIT}\n$$(cat evdev.xml)\n$${PICK_DONE}" > evdev.tmp.xml
 
 	@\
-	mv .evdev.tmp.xml $(TARGET)/rules/evdev.xml
-
+	XML=$(TARGET)/rules/evdev.xml; \
+	mv evdev.tmp.xml  $(XML) ;     \
+		cp $(XML) $(TARGET)/rules/base.xml
 
 
 #

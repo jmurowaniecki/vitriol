@@ -29,11 +29,6 @@ Then finally append `vitriol.xkb` to `/usr/share/X11/xkb/symbols/br` file.
 4.  Press **Alt Gr.** + **Shift** + **;** to print **∴**
 
 
-## Changelog
-
-### v0.3
-
-
 [](ASSETS)
 
 [ico-codacy ]: https://img.shields.io/codacy/grade/b002e2f9f0ad4ffb9ec5676789918b61?logo=codacy&logoColor=green&style=flat-square
@@ -49,8 +44,10 @@ Then finally append `vitriol.xkb` to `/usr/share/X11/xkb/symbols/br` file.
 [max-keyboard-url]: https://www.maxkeyboard.com/
 [diy-with-arduino]: https://www.makeuseof.com/tag/make-custom-shortcut-buttons-arduino/
 
-> P.S.: If you're intersted in use a custom printed keyboard see [MaxKeyboard][max-keyboard-url].
+> If you're intersted in use a custom printed keyboard see [MaxKeyboard][max-keyboard-url].
 \
-> P.S.²: If you want to make yourself a [custom keyboard using Arduino see more here][diy-with-arduino].
 \
-> P.S.³: Due to errors rendering _Level 3, Super_ or _Meta_ codes using `draw_key` from [gkbd-keyboard-drawing](https://github.com/GNOME/libgnomekbd/blob/master/libgnomekbd/gkbd-keyboard-drawing.c) some keys where rendered and placed manually on keyboard layout example.
+> If you want to make yourself a [custom keyboard using Arduino see more here][diy-with-arduino].
+\
+\
+> Due to errors rendering _Level 3, Super_ or _Meta_ codes using `draw_key` from [gkbd-keyboard-drawing](https://github.com/GNOME/libgnomekbd/blob/master/libgnomekbd/gkbd-keyboard-drawing.c) some keys where rendered and placed manually on keyboard layout example.

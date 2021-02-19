@@ -3,15 +3,13 @@
 ![Keyboard mapping][keyboard.png]
 
 [![StyleCI    ][ico-styleci]][url-styleci]
-[![Codacy     ][ico-codacy ]][url-codacy]
-[![Codeclimate][ico-codecli]][url-codecli]
 [![Version    ][ico-version]](#)
+<!-- [![Codacy     ][ico-codacy ]][url-codacy]
+[![Codeclimate][ico-codecli]][url-codecli] -->
 
 **V.I.T.R.I.O.L.¹** is an esoteric keyboard layout for those who need to use characters with astronomical, astrological, alchemical and mathematical meanings.
 
 > ¹ : _"Visita Interiora Terrae, Rectificando, Invenies Occultum Lapidem."_
-
-
 
 ## Installation
 
@@ -31,6 +29,10 @@ Then finally append `vitriol.xkb` to `/usr/share/X11/xkb/symbols/br` file.
 4.  Press **Alt Gr.** + **Shift** + **;** to print **∴**
 
 
+## Changelog
+
+### v0.3
+
 
 [](ASSETS)
 
@@ -42,4 +44,13 @@ Then finally append `vitriol.xkb` to `/usr/share/X11/xkb/symbols/br` file.
 [url-styleci]: https://github.styleci.io/repos/278512720
 [url-codecli]: https://codeclimate.com/github/jmurowaniecki/vitriol/maintainability
 
-[keyboard.png]: ./doc/assets/keyboard.png
+[keyboard.png]: ./doc/assets/layout.png
+
+[max-keyboard-url]: https://www.maxkeyboard.com/
+[diy-with-arduino]: https://www.makeuseof.com/tag/make-custom-shortcut-buttons-arduino/
+
+> P.S.: If you're intersted in use a custom printed keyboard see [MaxKeyboard][max-keyboard-url].
+\
+> P.S.²: If you want to make yourself a [custom keyboard using Arduino see more here][diy-with-arduino].
+\
+> P.S.³: Due to errors rendering _Level 3, Super_ or _Meta_ codes using `draw_key` from [gkbd-keyboard-drawing](https://github.com/GNOME/libgnomekbd/blob/master/libgnomekbd/gkbd-keyboard-drawing.c) some keys where rendered and placed manually on keyboard layout example.

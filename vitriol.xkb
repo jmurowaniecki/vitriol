@@ -11,29 +11,35 @@ xkb_symbols "vitriol" {
     include "br(abnt2)"
     name[Group1]="Portuguese (Brazil, Alchemical/Astrological)";
 
-    key <AB02> { [         x,              X,     U1F70E,       U1F70F ] };
-    key <AB03> { [         c,              C,  copyright,       U1F767 ] };
-    key <AB04> { [         v,              V,     U1F705,       U1F706 ] };
-    key <AB05> { [         b,              B, Greek_BETA,    Greek_phi ] };
-    key <AB06> { [         n,              N,     U1F76F,       U1F76D ] };
-    key <AB07> { [         m,              M,         mu,  Greek_OMEGA ] };
-    key <AB09> { [    period,        greater,     U1F441,       U1F708 ] };
-    key <AB10> { [ semicolon,          colon,   ellipsis,    therefore ] };
-    key <AC01> { [         a,              A,     U1F707,           AE ] };
-    key <AC03> { [         d,              D,     U1F760,  Greek_DELTA ] };
-    key <AC04> { [         f,              F,     U1F75E,       U1F75F ] };
-    key <AC09> { [         l,              L,     U1F76A,       U1F75F ] };
-    key <AD01> { [         q,              Q,     U1F700,       U1F763 ] };
-    key <AD02> { [         w,              W,     U1F762,       U1F764 ] };
-    key <AD03> { [         e,              E,  Greek_PSI,  Greek_SIGMA ] };
-    key <AD06> { [         y,              Y,      U03BB,          yen ] };
-    key <AD08> { [         i,              I, rightarrow,    leftarrow ] };
-    key <AD10> { [         p,              P,      thorn,     Greek_pi ] };
-    key <AE06> { [         6, dead_diaeresis,      U2609,       U1F701 ] };
-    key <AE07> { [         7,      ampersand,      U1F315,      U1F702 ] };
-    key <AE08> { [         8,       asterisk,      U263D,       U1F703 ] };
-    key <AE09> { [         9,      parenleft,      U1F311,      U1F704 ] };
-    key <AE10> { [         0,     parenright,      U263E,       U1F716 ] };
+    key <AB01> { [ z           , Z              , U000AB         , U000BB         ] }; // « »     Guillemets
+    key <AB02> { [ x           , X              , U1F70F         , U1F70E         ] }; // 🜏 🜎     Enxofre negro · filosofal
+    key <AB03> { [ c           , C              , copyright      , U1F767         ] }; // © 🝧     Copyright · crucível
+    key <AB04> { [ v           , V              , U1F705         , U1F706         ] }; // 🜅 🜆    Aquafortis · aqua regia
+    key <AB05> { [ b           , B              , Greek_BETA     , Greek_phi      ] }; // Β φ      Beta · phi
+    key <AB06> { [ n           , N              , U1F76F         , U1F76D         ] }; // 🝯 🝭     Noite · retorto
+    key <AB07> { [ m           , M              , mu             , Greek_OMEGA    ] }; // µ Ω      Mu · ômega
+    key <AB08> { [ comma       , less           , U1F441         , U1F708         ] }; // 👁 🜈     👁 · áqua vitae
+    key <AB09> { [ period      , greater        , periodcentered , U1F728         ] }; // · 🜨      Ponto central · Terra
+    key <AB10> { [ semicolon   , colon          , ellipsis       , therefore      ] }; // … ∴      Elipses · então
+    key <AC01> { [ a           , A              , U1F707         , AE             ] }; // 🜇 Æ      Áqua régia · Ae
+    key <AC03> { [ d           , D              , U1F760         , Greek_DELTA    ] }; // 🝠 Δ     Distila · delta
+    key <AC04> { [ f           , F              , U1F75E         , U1F75F         ] }; // 🝞 🝟     Sublima · precipita
+    key <AC09> { [ l           , L              , U1F76A         , U2644          ] }; // 🝪 ♄     Alambique · Saturno
+    key <AC10> { [ ccedilla    , Ccedilla       , U26E2          , U2646          ] }; // ⛢ ♆     Urano · Netuno
+    key <AC12> { [ bracketright, braceright     , masculine      , U2642          ] }; // º ♂      Ordinal Masculino · Marte
+    key <AD01> { [ q           , Q              , U1F700         , U1F763         ] }; // 🜀 🝣     Quintessência · purifica
+    key <AD02> { [ w           , W              , U1F762         , U1F764         ] }; // 🝢 🝤     Dissolve · putrefa
+    key <AD03> { [ e           , E              , Greek_PSI      , Greek_SIGMA    ] }; // Ψ Σ      Psi · sigma
+    key <AD04> { [ r           , R              , registered     , U1F732         ] }; // ® 🜲     Registrado · Regente
+    key <AD06> { [ y           , Y              , U03BB          , yen            ] }; // ↓ ↑
+    key <AD08> { [ i           , I              , rightarrow     , leftarrow      ] }; // → ←
+    key <AD10> { [ p           , P              , U2660          , Greek_pi       ] }; // ♠ π      Ás· Pi
+    key <AD12> { [ bracketleft , braceleft      , ordfeminine    , U2640          ] }; // ª ♀      Ordinal Feminino · Vênus
+    key <AE06> { [ 6           , dead_diaeresis , U2609          , U1F701         ] }; // ☉ 🜁     Sol · ar
+    key <AE07> { [ 7           , ampersand      , U1F315         , U1F702         ] }; // 🌕 🜂     Lua cheia · fogo
+    key <AE08> { [ 8           , asterisk       , U263D          , U1F703         ] }; // ☽ 🜃     Lua minguante · terra
+    key <AE09> { [ 9           , parenleft      , U1F311         , U1F704         ] }; // 🌑 🜄     Lua nova · água
+    key <AE10> { [ 0           , parenright     , U263E          , U1F716         ] }; // ☾ 🜖     Lua crescente · vitriol
 
 };
 // </vitriol>

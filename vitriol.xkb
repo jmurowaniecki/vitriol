@@ -18,12 +18,13 @@ xkb_symbols "vitriol" {
     key <AB05> { [ b           , B              , Greek_BETA     , Greek_phi      ] }; // Β φ      Beta · phi
     key <AB06> { [ n           , N              , U1F76F         , U1F76D         ] }; // 🝯 🝭     Noite · retorto
     key <AB07> { [ m           , M              , mu             , Greek_OMEGA    ] }; // µ Ω      Mu · ômega
-    key <AB08> { [ comma       , less           , U1F441         , U1F708         ] }; // 👁 🜈     👁 · áqua vitae
-    key <AB09> { [ period      , greater        , periodcentered , U1F728         ] }; // · 🜨      Ponto central · Terra
+    key <AB08> { [ comma       , less           , U1F441         , U1F708         ] }; // 👁 🜈     Olho · áqua vitae
+    key <AB09> { [ period      , greater        , periodcentered , U1F728         ] }; // · 🜨      Ponto central · Terra/Verdigris
     key <AB10> { [ semicolon   , colon          , ellipsis       , therefore      ] }; // … ∴      Elipses · então
     key <AC01> { [ a           , A              , U1F707         , AE             ] }; // 🜇 Æ      Áqua régia · Ae
     key <AC03> { [ d           , D              , U1F760         , Greek_DELTA    ] }; // 🝠 Δ     Distila · delta
     key <AC04> { [ f           , F              , U1F75E         , U1F75F         ] }; // 🝞 🝟     Sublima · precipita
+    key <AC07> { [ j           , J              , U02643         , U0263F         ] }; // ♃ ☿     Júpiter · Mercúrio
     key <AC09> { [ l           , L              , U1F76A         , U2644          ] }; // 🝪 ♄     Alambique · Saturno
     key <AC10> { [ ccedilla    , Ccedilla       , U26E2          , U2646          ] }; // ⛢ ♆     Urano · Netuno
     key <AC12> { [ bracketright, braceright     , masculine      , U2642          ] }; // º ♂      Ordinal Masculino · Marte

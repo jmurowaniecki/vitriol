@@ -43,8 +43,9 @@ Then finally append `vitriol.xkb` to `/usr/share/X11/xkb/symbols/br` file.
 
 [max-keyboard-url]: https://www.maxkeyboard.com/
 [diy-with-arduino]: https://www.makeuseof.com/tag/make-custom-shortcut-buttons-arduino/
+[kbdfans]: https://kbdfans.com/collections/da-profile
 
-> If you're intersted in use a custom printed keyboard see [MaxKeyboard][max-keyboard-url].
+> If you're intersted in use a custom printed keyboard see [MaxKeyboard][max-keyboard-url] or DIY try [KBDFans][kbdfans].
 \
 \
 > If you want to make yourself a [custom keyboard using Arduino see more here][diy-with-arduino].

@@ -2,10 +2,8 @@
 # λ::Makefile
 #
 
-PREFIX?= /bin
 TARGET?= /usr/share/X11/xkb
 SOURCE?= vitriol.xkb
-NULL  ?= /dev/null
 
 ifneq (,$(DESTDIR))
 TARGET =$(DESTDIR)
@@ -104,7 +102,8 @@ install-steps: \
 	install-step1 \
 	install-step2 \
 	install-step3 \
-	install-step4
+	install-step4 \
+	clean
 
 #
 install: install-steps # Installs application.
@@ -112,12 +111,20 @@ install: install-steps # Installs application.
 
 update: install-step4 # Update symbols.
 
+
+clean: # Remove temporary files.
+	@\
+	rm -Rf .head .tail *.head *.tail
+
+
 #
 screenshot: # Take a screenshot from the keyboard layout
 	@\
-	layout="br(vitriol)"""""""""; \
-	window="ptBR V.I.T.R.I.O.L."; \
+	layout="br""(vitriol)"""""""; \
 	assets=doc/assets/layout.png; \
+	SED='''s/.*\"(.*)\".*/\1/'''; \
+	GREP='''name\[Group1\]\="'''; \
+	window=$$(cat $(SOURCE) | grep $${GREP} | sed -E $${SED}); \
 	gkbd-keyboard-display -l $$layout & screen="$$!"; sleep 1; \
 	xdotool search --name "\?" set_window --name "$${window}"; \
 	gnome-screenshot --window --file "./$${assets}" --delay 1; \
@@ -134,14 +141,8 @@ help: # Shows this help.
 	LEN=length($$2); COND=(LEN < 1); \
 	FORMAT=(COND ? $(STR) : $(CMD)); \
 	printf(FORMAT, $$1, """"""$$2 ); \
-	}' $(MAKEFILE_LIST) | ($(HLP)))"
-
-
-#
-clean: # Remove temporary files.
-	@\
-	rm -Rf .head .tail *.head *.tail
-
+	}' $(MAKEFILE_LIST) | ($(HLP)))" \
+	;
 
 #
 %:

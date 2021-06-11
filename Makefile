@@ -32,7 +32,7 @@ TARGETS = $(foreach destiny, $(FILES), $(wildcard $(TARGET)/$(destiny)))
 
 DEFAULT: help
 # For further information see `README.md`.
-#
+#̣
 
 
 
@@ -49,7 +49,7 @@ check: # Check environment…
 install-step1:
 	@\
 	grep -iq "\svitriol\s" $(TARGET)/rules/evdev.lst \
-	&& echo "Already installed on \e[1m$(TARGET)/rules/evdev.lst\e[0m" \
+	&& echo -e "Already installed on \e[1m$(TARGET)/rules/evdev.lst\e[0m" \
 	|| { \
 		LST=$(TARGET)/rules/evdev.lst; \
 		cat evdev.lst >> \
@@ -60,7 +60,7 @@ install-step1:
 install-step2:
 	@\
 	grep -iq "vitriol" $(TARGET)/rules/evdev.xml \
-	&& echo "Already installed on \e[1m$(TARGET)/rules/evdev.xml\e[0m" \
+	&& echo -e "Already installed on \e[1m$(TARGET)/rules/evdev.xml\e[0m" \
 	|| { \
 		PICK_SIZE=$$(cat $(TARGET)/rules/evdev.xml | wc -l); \
 		PICK_LINE=$$(cat $(TARGET)/rules/evdev.xml | \
@@ -83,7 +83,7 @@ install-step-3: evdev.tmp.xml
 install-step4:
 	@\
 	grep -iq "vitriol" $(TARGET)/$(SYMBOL) \
-	&& echo "Already installed on \e[1m$(TARGET)/$(SYMBOL)\e[0m… Updating…"; \
+	&& echo -e "Already installed on \e[1m$(TARGET)/$(SYMBOL)\e[0m… Updating…"; \
 	HEAD= \
 	TAIL= \
 	; Ouroboros() { \
@@ -107,10 +107,10 @@ install-steps: \
 	install-step4
 
 #
-install: install-steps # Installs application.
+install: install-steps clean # Installs application.
 
 
-update: install-step4 # Update symbols.
+update: install-step4 clean # Update symbols.
 
 #
 screenshot: # Take a screenshot from the keyboard layout
@@ -127,7 +127,7 @@ screenshot: # Take a screenshot from the keyboard layout
 #
 help: # Shows this help.
 	@\
-	echo """"""""""""""""""""""""""" \
+	echo -e """"""""""""""""""""""""" \
 	$$(awk 'BEGIN {   FS=":.*?#"   } \
 	/^(\w+:.*|)#/ {                  \
 	gsub("^( : |)#( |)", """""""" ); \
@@ -140,7 +140,7 @@ help: # Shows this help.
 #
 clean: # Remove temporary files.
 	@\
-	rm -Rf .head .tail *.head *.tail
+	rm -Rf .head .tail *.head *.tail *.tmp.xml
 
 
 #

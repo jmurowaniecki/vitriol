@@ -7,6 +7,9 @@
 <!-- [![Codacy     ][ico-codacy ]][url-codacy]
 [![Codeclimate][ico-codecli]][url-codecli] -->
 
+![](https://img.shields.io/badge/Ubuntu_16.x+-building-green?style=for-the-badge&logo=ubuntu)
+![](https://img.shields.io/badge/Arch-failed-orange?style=for-the-badge&logo=arch-linux)
+
 **V.I.T.R.I.O.L.¹** is an esoteric keyboard layout for those who need to use characters with astronomical, astrological, alchemical and mathematical meanings.
 
 > ¹ : _"Visita Interiora Terrae, Rectificando, Invenies Occultum Lapidem."_

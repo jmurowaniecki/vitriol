@@ -2,13 +2,10 @@
 
 ![Keyboard mapping][keyboard.png]
 
-[![StyleCI    ][ico-styleci]][url-styleci]
 [![Version    ][ico-version]](#)
-<!-- [![Codacy     ][ico-codacy ]][url-codacy]
-[![Codeclimate][ico-codecli]][url-codecli] -->
 
 ![](https://img.shields.io/badge/Ubuntu_16.x+-building-green?style=for-the-badge&logo=ubuntu)
-![](https://img.shields.io/badge/Arch-failed-orange?style=for-the-badge&logo=arch-linux)
+![](https://img.shields.io/badge/Arch-building-green?style=for-the-badge&logo=arch-linux)
 
 **V.I.T.R.I.O.L.¹** is an esoteric keyboard layout for those who need to use characters with astronomical, astrological, alchemical and mathematical meanings.
 
@@ -34,13 +31,7 @@ Then finally append `vitriol.xkb` to `/usr/share/X11/xkb/symbols/br` file.
 
 [](ASSETS)
 
-[ico-codacy ]: https://img.shields.io/codacy/grade/b002e2f9f0ad4ffb9ec5676789918b61?logo=codacy&logoColor=green&style=flat-square
-[ico-styleci]: https://github.styleci.io/repos/278512720/shield?branch=master
 [ico-version]: https://img.shields.io/github/v/tag/jmurowaniecki/vitriol?sort=semver&style=flat-square
-[ico-codecli]: https://api.codeclimate.com/v1/badges/bb01325f8a84fc9fba31/maintainability
-[url-codacy ]: https://www.codacy.com/app/jmurowaniecki/vitriol
-[url-styleci]: https://github.styleci.io/repos/278512720
-[url-codecli]: https://codeclimate.com/github/jmurowaniecki/vitriol/maintainability
 
 [keyboard.png]: ./doc/assets/layout.png
 

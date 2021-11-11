@@ -40,7 +40,7 @@ Após realizar a instalação é necessário reiniciar sua sessão X11 (fazer lo
 1.  Realize a instalação utilizando os passo do **Makefile**: `make install`;
 2.  Abra as configurações do seu sistema e vá para **`Linguagem / Configuração de teclados`**;
 3.  Selecione o mapeamento **Portuguese (Brazil, Esoteric)** desejado;
-4.  Pressione **Alt Gr.** + **Shift** + **;** para imprimir o caractere ' **` ∴ `** '.
+4.  Pressione **` Alt Gr. `** + **` Shift `** + **` ; `** para imprimir o caractere ' **` ∴ `** '.
 5.  Saiba que eventuais atualizações do sistema sobreescreverão suas configurações, sendo necessário eventualmente repetir o processo de instalação.
 
 
@@ -56,37 +56,33 @@ Após realizar a instalação é necessário reiniciar sua sessão X11 (fazer lo
 
 ## Diversidade de gênero e termos juvélicos
 
-Símbolo | Teclas     | Identidade de gênero
-:------:|-----------:|---------------------
-`♀` | Shift + Alt*Gr* + **[** | **Feminino**
-`♂` | Shift + Alt*Gr* + **]** | **Masculino**
-`⚧`| Shift + Alt*Gr* + **\`** | **transgênero**
-`⚦`| Alt*Gr* + **=** | **transgênero** **Masculino**
-`⚥`| Alt*Gr* + Shift + **-** | **bigênero** - Também chamado **bigender**, **Cis**, **intersex** representado por um símbolo masculino + feminino.
-`☿`| Shift + Alt*Gr* + **~** | **intersexo**
-`⊕`| Shift + Alt*Gr* + **.** | **ipsogênero** - _Pessoa que se identifica completamente - e pela vida inteira - com o **mesmo gênero** designado em sua nascença._
-`🞵`| Shift + Alt*Gr* + **=** | **não-binárie**
-`⚨`| ![][TODO] | **andrógine** - Ou também **transgênero** **Feminino**.
-`⚲`| ![][TODO] | **neutrois/gênero neutro** - Também chamada **genderless**, **sem gênero**
-`○`| ![][TODO] | **agênero**
-`⚩`| ![][TODO] | **aliagênero** - Também enquadrado como **não binário**.
-`⚴`| ![][TODO] | **neurogênero**
-
-
-Símbolo | Teclas       | Orientação sexual
-:------:|-------------:|------------------
-`⚣`| Alt*Gr* + **~** | **gay** - Combinação das teclas `Alt*Gr* + TIL`.
-`⚢`| Alt*Gr* + **\`** | **lésbica** - Combinação das teclas `Alt*Gr* + Crase`.
-`π`| Alt*Gr* + Shift + **P** | **poliamorosa**
-`♠`| Alt*Gr* + **P** | **assexual** - Também interpretado como **arromântique/arromântico**.
-`☽︎☾︎`| Alt*Gr* + **8** e, a seguir Alt*Gr* + **0** | **bissexual** - Representado aqui por uma _`lua dupla`_.
-`⚤`| ![][TODO] | **bissexual**
-`ꉣ` | ![][TODO] | **panssexual**
-`☀︎︎` | ![][TODO] | **panssexual**
-`➴`|  ![][TODO] | **arromântique**
+Símbolo | Combinação de teclas | Identidade de gênero e/ou Orientação sexual
+:------:|---------------------:|---------------------------------------------
+ `♀` | ` Shift ` ` AltGr ` **` [ `** | Gênero **Feminino**
+ `♂` | ` Shift ` ` AltGr ` **` ] `** | Gênero **Masculino**
+ `⚧` | ` Shift ` ` AltGr ` **` ´ `** | Gênero **transgênero**
+ `⚦` | ` AltGr ` **` = `** | Gênero **transgênero** **Masculino**
+ `⚥` | ` AltGr ` ` Shift ` **` - `** | Gênero **bigênero**<br>Também chamado **bigender**, **Cis**, **intersex** representado por um símbolo masculino + feminino.
+ `☿` | ` Shift ` ` AltGr ` **` ~ `** | Gênero **intersexo** ou **intergênero**
+ `⊕` | ` Shift ` ` AltGr ` **` . `** | Gênero **ipsogênero**<br>_Pessoa que se identifica completamente - e pela vida inteira - com o **mesmo gênero** designado em sua nascença._
+ `🞵` | ` Shift ` ` AltGr ` **` = `** | Gênero **não-binárie**
+ `⚨` | ![][TODO] | Gênero **andrógine**<br>Ou também **transgênero** **Feminino**.
+ `⚲` | ![][TODO] | Gênero **neutrois/gênero neutro**<br>Também chamada **genderless**, **sem gênero**
+ `○` | ![][TODO] | Gênero **agênero**
+ `⚩` | ![][TODO] | Gênero **aliagênero**<br>Também enquadrado como **não binário**.
+ `⚴` | ![][TODO] | Gênero **neurogênero**
+ `⚣` | ` AltGr ` **` ~ `** | **gay**
+ `⚢` | ` AltGr ` **` ´ `** | **lésbica**
+ `π`  | ` AltGr ` ` Shift ` **` P `** | **poliamorosa**
+ `♠`  | ` AltGr ` **` P `** | **assexual**<br>Também interpretado como **arromântique/arromântico**.
+ `☽︎☾︎` | ` AltGr ` **` 8 `** e, a seguir ` AltGr ` **` 0 `** | **bissexual**<br>Representado aqui por uma _`lua dupla`_.
+ `⚤` | ![][TODO] | **bissexual**
+ `ꉣ`  | ![][TODO] | **panssexual**
+ `☀︎︎`  | ![][TODO] | **panssexual**
+ `➴`  | ![][TODO] | **arromântique**
 
 <!--
-Símbolo|Teclas|Status do relacionamento
+Símbolo|Combinação de teclas|Status do relacionamento
 :-----:|:-----------:|---
 ` ⚯ ` | ![][TODO] | Namorando
 ` ⚭ ` | ![][TODO] | Casado
@@ -108,4 +104,4 @@ Símbolo|Teclas|Status do relacionamento
 
 [max-keyboard-url]: https://www.maxkeyboard.com/
 [diy-with-arduino]: https://www.makeuseof.com/tag/make-custom-shortcut-buttons-arduino/
-[TODO]: https://img.shields.io/badge/⚠_não-implementado-magenta?style=flat-square
+[TODO]: https://img.shields.io/badge/atalho_de_teclas_-indefinido-violet?style=flat-square

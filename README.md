@@ -1,32 +1,103 @@
-# Esoteric keyboard layout
+# **V·I·T·R·I·O·L** <img align="right" src="https://img.shields.io/github/v/tag/jmurowaniecki/vitriol?sort=semver&style=flat-square" />
 
-![Keyboard mapping][keyboard.png]
+![Leiaute de teclas mapeadas][keyboard.png]
 
-[![Version    ][ico-version]](#)
+<!--
+@TODO: Review install process.
+![](https://img.shields.io/badge/ubuntu-building-green?style=for-the-badge&logo=ubuntu)
+![](https://img.shields.io/badge/arch-building-green?style=for-the-badge&logo=arch-linux)
+![](https://img.shields.io/badge/debian-building-green?style=for-the-badge&logo=debian)
+![](https://img.shields.io/badge/slackware-building-green?style=for-the-badge&logo=slackware)
+![](https://img.shields.io/badge/linuxmint-failure-red?style=for-the-badge&logo=linuxmint)
+![](https://img.shields.io/badge/popOS-failure-red?style=for-the-badge&logo=popOS)
+-->
 
-![](https://img.shields.io/badge/Ubuntu_16.x+-building-green?style=for-the-badge&logo=ubuntu)
-![](https://img.shields.io/badge/Arch-building-green?style=for-the-badge&logo=arch-linux)
+**V.I.T.R.I.O.L.¹** é um mapeamento simbólico para layouts de teclados baseados em sistemas X11 para todos aqueles que necessitam de caracteres com simbologia astronômica, astrológica, alquímica, matemática e/ou de **diversidade gênero e simbologia juvélica**².
 
-**V.I.T.R.I.O.L.¹** is an esoteric keyboard layout for those who need to use characters with astronomical, astrological, alchemical and mathematical meanings.
-
-> ¹ : _"Visita Interiora Terrae, Rectificando, Invenies Occultum Lapidem."_
-
-## Installation
-
-Append contents from `evdev.lst` to `! variant` section of `/usr/share/X11/xkb/rules/evdev.lst`, and `evdev.xml` to it's correspondent `variantList` of  **BR** section from `/usr/share/X11/xkb/rules/evdev.xml`.
-
-Then finally append `vitriol.xkb` to `/usr/share/X11/xkb/symbols/br` file.
-
-> Also you can perform installation with `make install`.
+Esta biblioteca visa contribuir para os estudos e publicações não apenas dos casos citados acima, se você necessitar de um mapeamento específico e/ou tiver alguma ideia, dúvida, crítica ou sugestão sinta-se a vontade para contatar e/ou abrir uma issue, pull request ou até mesmo realizar um fork deste projeto.
 
 
+> ¹ : Significa literalmente _"Visita Interiora Terrae, Rectificando, Invenies Occultum Lapidem."_
 
-## Basic usage steps
+> ² : Não está completo, mas já é um _work-in-progress_.
 
-1.  Installs using **Makefile**;
-2.  Open your system configurations and goto Language/keyboard definitions;
-3.  Change your keyboard mapping to **Portuguese (Brazil, Esoteric)**;
-4.  Press **Alt Gr.** + **Shift** + **;** to print **∴**
+
+
+## Instalação
+
+Adicione o conteúdo do arquivo `evdev.lst` à seção `! variant` do arquivo `/usr/share/X11/xkb/rules/evdev.lst`, e ao `evdev.xml` para sua `variantList` correspondente na seção **BR** do arquivo `/usr/share/X11/xkb/rules/evdev.xml`.
+
+Então finalmente adicione o arquivo `vitriol.xkb` ao seu arquivo de símbolos `/usr/share/X11/xkb/symbols/br`.
+
+Após realizar a instalação é necessário reiniciar sua sessão X11 (fazer logout).
+
+> Você também pode realizar esses procedimentos de forma automática com o comando `make install`.
+
+
+
+## Primeiros passos
+
+1.  Realize a instalação utilizando os passo do **Makefile**: `make install`;
+2.  Abra as configurações do seu sistema e vá para **`Linguagem / Configuração de teclados`**;
+3.  Selecione o mapeamento **Portuguese (Brazil, Esoteric)** desejado;
+4.  Pressione **Alt Gr.** + **Shift** + **;** para imprimir o caractere ' **` ∴ `** '.
+5.  Saiba que eventuais atualizações do sistema sobreescreverão suas configurações, sendo necessário eventualmente repetir o processo de instalação.
+
+
+> Se você e interessa em teclas customizadas e/ou impressas dê uma [olhada aqui][max-keyboard-url].
+\
+\
+> Se você quer fazer um teclado customizado utilizando Arduino [isso aqui pode te ajudar][diy-with-arduino].
+\
+\
+> Devido a erros renderizando os caracteres _Level 3, Super_ ou _Meta_ utilizando o programa `draw-key` de [gkbd-keyboard-drawing](https://github.com/GNOME/libgnomekbd/blob/master/libgnomekbd/gkbd-keyboard-drawing.c) algumas teclas e seus valores podem ter sido renderizadas e posicionadas manualmente no teclado de exemplo.
+
+
+
+## Diversidade de gênero e termos juvélicos
+
+Símbolo | Teclas     | Identidade de gênero
+:------:|-----------:|---------------------
+`♀` | Shift + Alt*Gr* + **[** | **Feminino**
+`♂` | Shift + Alt*Gr* + **]** | **Masculino**
+`⚧`| Shift + Alt*Gr* + **\`** | **transgênero**
+`⚦`| Alt*Gr* + **=** | **transgênero** **Masculino**
+`⚥`| Alt*Gr* + Shift + **-** | **bigênero** - Também chamado **bigender**, **Cis**, **intersex** representado por um símbolo masculino + feminino.
+`☿`| Shift + Alt*Gr* + **~** | **intersexo**
+`⊕`| Shift + Alt*Gr* + **.** | **ipsogênero** - _Pessoa que se identifica completamente - e pela vida inteira - com o **mesmo gênero** designado em sua nascença._
+`🞵`| Shift + Alt*Gr* + **=** | **não-binárie**
+`⚨`| ![][TODO] | **andrógine** - Ou também **transgênero** **Feminino**.
+`⚲`| ![][TODO] | **neutrois/gênero neutro** - Também chamada **genderless**, **sem gênero**
+`○`| ![][TODO] | **agênero**
+`⚩`| ![][TODO] | **aliagênero** - Também enquadrado como **não binário**.
+`⚴`| ![][TODO] | **neurogênero**
+
+
+Símbolo | Teclas       | Orientação sexual
+:------:|-------------:|------------------
+`⚣`| Alt*Gr* + **~** | **gay** - Combinação das teclas `Alt*Gr* + TIL`.
+`⚢`| Alt*Gr* + **\`** | **lésbica** - Combinação das teclas `Alt*Gr* + Crase`.
+`π`| Alt*Gr* + Shift + **P** | **poliamorosa**
+`♠`| Alt*Gr* + **P** | **assexual** - Também interpretado como **arromântique/arromântico**.
+`☽︎☾︎`| Alt*Gr* + **8** e, a seguir Alt*Gr* + **0** | **bissexual** - Representado aqui por uma _`lua dupla`_.
+`⚤`| ![][TODO] | **bissexual**
+`ꉣ` | ![][TODO] | **panssexual**
+`☀︎︎` | ![][TODO] | **panssexual**
+`➴`|  ![][TODO] | **arromântique**
+
+<!--
+Símbolo|Teclas|Status do relacionamento
+:-----:|:-----------:|---
+` ⚯ ` | ![][TODO] | Namorando
+` ⚭ ` | ![][TODO] | Casado
+` ⚮ ` | ![][TODO] | Divorciado
+-->
+
+> Fontes e artigos:
+[O que voce precisa saber sobre o i em lgbti no dia da visibilidade intersexual](https://www.grupodignidade.org.br/intersex-o-que-voce-precisa-saber-sobre-o-i-em-lgbti-no-dia-da-visibilidade-intersexual/),
+[Categorias relacionadas a genero](https://orientando.org/categorias-relacionadas-a-genero/) e
+[Gender symbols](http://www.cakeworld.info/transsexualism/gender-symbols).
+
 
 
 [](ASSETS)
@@ -37,11 +108,4 @@ Then finally append `vitriol.xkb` to `/usr/share/X11/xkb/symbols/br` file.
 
 [max-keyboard-url]: https://www.maxkeyboard.com/
 [diy-with-arduino]: https://www.makeuseof.com/tag/make-custom-shortcut-buttons-arduino/
-
-> If you're intersted in use a custom printed keyboard see [MaxKeyboard][max-keyboard-url].
-\
-\
-> If you want to make yourself a [custom keyboard using Arduino see more here][diy-with-arduino].
-\
-\
-> Due to errors rendering _Level 3, Super_ or _Meta_ codes using `draw_key` from [gkbd-keyboard-drawing](https://github.com/GNOME/libgnomekbd/blob/master/libgnomekbd/gkbd-keyboard-drawing.c) some keys where rendered and placed manually on keyboard layout example.
+[TODO]: https://img.shields.io/badge/⚠_não-implementado-magenta?style=flat-square

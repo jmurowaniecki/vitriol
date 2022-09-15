@@ -94,6 +94,8 @@ Símbolo|Combinação de teclas|Status do relacionamento
 [Categorias relacionadas a genero](https://orientando.org/categorias-relacionadas-a-genero/) e
 [Gender symbols](http://www.cakeworld.info/transsexualism/gender-symbols).
 
+> O layout QWERTY foi projetado no século XIX. O Colemak é uma alternativa moderna aos layouts QWERTY e Dvorak, projetado para digitação por toque eficiente e ergonômica em inglês. [Veja mais sobre…](https://colemak.com/)
+
 
 
 [](ASSETS)

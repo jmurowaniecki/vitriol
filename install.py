@@ -128,7 +128,7 @@ class Application:
 
             if not self.source["evdev.lst"]["marks"][0] in file:
                 for line in file:
-                    found = re.search("^.*nativo .* br: Portuguese (Brazil,.*$", line)
+                    found = re.search("^.*nativo .* br: Portuguese \(Brazil,.*$", line)
                     if found:
                         file.insert(file.index(line), orig[0])
                         print (file[file.index(line) - 5: file.index(line) + 5])
@@ -163,14 +163,17 @@ class Application:
     def getSource(self, source, default_path = "install/"):
         """Decode source path.
         """
-        return f"{default_path}{self.source[source]['from']}{self.source[source]['ext']}"
+        (name, rules) = source
+        # return "%s%s%s" % (default_path, self.source[source]['from'], self.source[source]['ext'])
+        return f"{default_path}{rules['from']}{rules['ext']}"
 
 
 
     def getTarget(self, target):
         """Decode target path.
         """
-        return f"{self.args.target}/{self.source[target]['to']}{self.source[target]['ext']}"
+        (name, rules) = target
+        return f"{self.args.target}/{rules['to']}{rules['ext']}"
 
 
 
@@ -192,7 +195,8 @@ class Application:
         for target in self.source.items():
             origins = self.getSource(target)
             destiny = self.getTarget(target)
-            self.source[target]["exec"](destiny, origins)
+            (source, rules) = target
+            self.source[source]["exec"](destiny, origins)
 
 
 

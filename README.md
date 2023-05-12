@@ -23,6 +23,23 @@ Esta biblioteca visa contribuir para os estudos e publicações não apenas dos 
 
 
 
+## Requisitos
+
+Certifique-se de que seu sistema está com o pacote `unicode` (da seção `utils`) e `ttf-ancient-fonts` instalado e atualizado.
+
+```sh
+# Ubuntu
+sudo apt update && sudo apt install unicode ttf-ancient-fonts
+
+# Arch
+yay -Syu unicode-emoji
+
+# Alpine
+apk add unicode-character-database
+```
+
+
+
 ## Instalação
 
 Adicione o conteúdo do arquivo `evdev.lst` à seção `! variant` do arquivo `/usr/share/X11/xkb/rules/evdev.lst`, e ao `evdev.xml` para sua `variantList` correspondente na seção **BR** do arquivo `/usr/share/X11/xkb/rules/evdev.xml`.

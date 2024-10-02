@@ -1,6 +1,18 @@
         <variant>
           <configItem>
-            <name>vitriol</name>
+            <name>vitrioles</name>
             <description>Portuguese (Brazil, Esoteric)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>vitriolas</name>
+            <description>Portuguese (Brazil, Astrologic)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>vitriolju</name>
+            <description>Portuguese (Brazil, Juvelic)</description>
           </configItem>
         </variant>

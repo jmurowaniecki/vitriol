@@ -1,5 +1,3 @@
-
-// <vitrioles>
 //
 //   Esoteric keyboard layout
 //    by John Murowaniecki
@@ -23,15 +21,15 @@ xkb_symbols "vitrioles" {
     key <AD01> { [ q           , Q              , U1F700         , U1F763         ] }; // 🜀 🝣
     key <AD02> { [ w           , W              , U1F762         , U1F764         ] }; // 🝢 🝤
     key <AD03> { [ e           , E              , Greek_PSI      , Greek_SIGMA    ] }; // Ψ Σ
-    key <AD04> { [ r           , R              , registered     , U1F732         ] }; // ® 🜲      # 001
+    key <AD04> { [ r           , R              , registered     , U1F732         ] }; // ® 🜲        # 001
     key <AD05> { [ t           , T              , U02625         , U02628         ] }; // ☥ ☨
     key <AD06> { [ y           , Y              , U003BB         , U1F709         ] }; // λ 🜉
     key <AD08> { [ u           , U              , U02191         , U02193         ] }; // ↓ ↑
     key <AD08> { [ i           , I              , U02192         , U02190         ] }; // → ←
     key <AD10> { [ o           , O              , U02660         , U10348         ] }; // ø 𐍈
-    key <AD10> { [ p           , P              , U02627         , Greek_pi       ] }; // ☧ π       # 001
+    key <AD10> { [ p           , P              , U02627         , Greek_pi       ] }; // ☧ π        # 001
     key <AD11> { [ dead_acute  , dead_grave     , U1F701         , U1F702         ] }; // 🜁 🜂
-    key <AD12> { [ bracketleft , braceleft      , ordfeminine    , U1F71B         ] }; // ª 🜛       # 001
+    key <AD12> { [ bracketleft , braceleft      , ordfeminine    , U1F71B         ] }; // ª 🜛        # 001
 
     key <AC01> { [ a           , A              , U1F707         , AE             ] }; // 🜇 Æ
     key <AC02> { [ s           , S              , U02620         , U02600         ] }; // ☠ ☀
@@ -44,7 +42,7 @@ xkb_symbols "vitrioles" {
     key <AC09> { [ l           , L              , U02650         , U02651         ] }; // ♐ ♑
     key <AC10> { [ ccedilla    , Ccedilla       , U02652         , U02653         ] }; // ♒ ♓
     key <AC11> { [ dead_tilde  , dead_circumflex, U1F703         , U1F704         ] }; // 🜃 🜄
-    key <AC12> { [ bracketright, braceright     , masculine      , U1F71B         ] }; // º 🜛
+    key <AC12> { [ bracketright, braceright     , masculine      , U1F71B         ] }; // º 🜛        # 001
 
     key <AB01> { [ z           , Z              , U1F76A         , U1F71A         ] }; // 🝪 🜚
     key <AB02> { [ x           , X              , U1F70F         , U1F70E         ] }; // 🜏 🜎
@@ -75,5 +73,3 @@ xkb_symbols "vitrioles" {
     key <BKSP> { [ BackSpace   , BackSpace      , U026E4         , U026E7         ] }; // ⛤ ⛧
     key  <TAB> { [ Tab         , ISO_Left_Tab   , U0269A         , U02695         ] }; // ⚚ ⚕
 };
-
-// </vitrioles>

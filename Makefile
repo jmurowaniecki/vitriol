@@ -66,7 +66,7 @@ screenshot: # Take a screenshot from the keyboard layout
 #
 help: # Shows this help.
 	@\
-	echo -e """"""""""""""""""""""""" \
+	echo """"""""""""""""""""""""""" \
 	$$(awk 'BEGIN {   FS=":.*?#"   } \
 	/^(\w+:.*|)#/ {                  \
 	gsub("^( : |)#( |)", """""""" ); \

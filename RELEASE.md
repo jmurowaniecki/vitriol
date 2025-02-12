@@ -8,6 +8,7 @@ For this reason I decided to leave frequently used symbols in the same positions
 
 Code| Symbol | Description
 ----|:------:|------------
-001 |    ©   | **Copyright** - Maintained because it is widely used, regardless of the layout used (esoteric, astronomical, alchemical and/or Juvelic).
-001 |    ®   | **Regiistered** - Maintained because it is widely used, regardless of the layout used (esoteric, astronomical, alchemical and/or Juvelic).
-001 |    π   | **Greek Pi** - Maintained because it is widely used, regardless of the layout used (esoteric, astronomical, alchemical and/or Juvelic).
+001 |   `©`  | **Copyright** - Maintained because it is widely used, regardless of the layout used (esoteric, astronomical, alchemical and/or Juvelic).
+001 |   `®`  | **Registered** - Maintained because it is widely used, regardless of the layout used (esoteric, astronomical, alchemical and/or Juvelic).
+001 |   `π`  | **Greek Pi** - Maintained because it is widely used, regardless of the layout used (esoteric, astronomical, alchemical and/or Juvelic).
+001 | `ª` `º`  | **Ord Feminine** and **Masculine**.

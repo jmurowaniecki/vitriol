@@ -1,5 +1,3 @@
-
-// <vitriolic>
 //   Juvelic keyboard layout
 //    by John Murowaniecki
 // <jmurowaniecki @ gmail.com>
@@ -74,4 +72,3 @@ xkb_symbols "vitriolic" {
     key <BKSP> { [ BackSpace   , BackSpace      , U026E4         , U026E7         ] }; // ⛤ ⛧
     key  <TAB> { [ Tab         , ISO_Left_Tab   , U0269A         , U02695         ] }; // ⚚ ⚕
 };
-// </vitriolic>

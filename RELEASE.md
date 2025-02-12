@@ -1,5 +1,8 @@
 # Release notes
 
+## 2025-02-12
+Rearranging mappings to approximate alchemical signs, states and elements and similar symbology.
+
 ## Keeping standart symbols
 
 First, before anything else, I would like to say that layouts serve to facilitate access to symbols that are not normally assigned, making it unnecessary to memorize codes or access a file or auxiliary program containing a table for quick use.

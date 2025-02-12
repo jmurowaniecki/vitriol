@@ -43,9 +43,17 @@ class Application:
         self.parser.add_argument(
             "-T",
             "--target",
-            default="/usr/share/X11/xkb/rules",
+            default="/usr/share/X11/xkb",
             type=self.isValidTargetDirectory,
             help="Target folder to install artefacts.",
+        )
+
+        self.parser.add_argument(
+            "-V",
+            "--verbose",
+            default=False,
+            action='store_true',
+            help="Output verbosity.",
         )
 
         self.source = {
@@ -128,7 +136,7 @@ class Application:
 
             if not self.source["evdev.lst"]["marks"][0] in file:
                 for line in file:
-                    found = re.search("^.*nativo .* br: Portuguese \(Brazil,.*$", line)
+                    found = re.search("^.*nativo .* br: Portuguese (Brazil,.*$", line)
                     if found:
                         file.insert(file.index(line), orig[0])
                         print (file[file.index(line) - 5: file.index(line) + 5])
@@ -164,6 +172,9 @@ class Application:
         """Decode source path.
         """
         (name, rules) = source
+        if self.verbose:
+            print(f"Name and rules: {name} {rules}.")
+
         # return "%s%s%s" % (default_path, self.source[source]['from'], self.source[source]['ext'])
         return f"{default_path}{rules['from']}{rules['ext']}"
 
@@ -173,11 +184,14 @@ class Application:
         """Decode target path.
         """
         (name, rules) = target
+        if self.verbose:
+            print(f"Name and rules: {name} {rules}.")
         return f"{self.args.target}/{rules['to']}{rules['ext']}"
 
 
 
     simulate = False
+    verbose  = False
 
 
 
@@ -185,6 +199,7 @@ class Application:
         """Method: check - Only check for files having signatures.
         """
         self.simulate = True
+        self.verbose  = False
         self.install()
 
 
@@ -196,6 +211,8 @@ class Application:
             origins = self.getSource(target)
             destiny = self.getTarget(target)
             (source, rules) = target
+            if self.verbose:
+                print(f"Source name and rules: {source} {rules}.")
             self.source[source]["exec"](destiny, origins)
 
 

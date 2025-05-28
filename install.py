@@ -7,6 +7,7 @@ Repository: https://github.com/jmurowaniecki/vitriol
 """
 
 import xml.etree.ElementTree as ET
+import xml.dom.minidom
 import argparse
 import os
 import re
@@ -56,12 +57,26 @@ class Application:
             help="Output verbosity.",
         )
 
+        self.parser.add_argument(
+            "-F",
+            "--force",
+            default=False,
+            action='store_true',
+            help="Force install/update.",
+        )
+
+        self.variants = [
+            "vitrioles",
+            "vitriolas",
+            "vitriolic",
+            "vitriolma",
+        ]
         self.source = {
-            "evdev.lst": { "from": "rules/evdev",         "to": "rules/evdev", "ext": ".lst", "marks": [ "vitriol" ],                       "checked": False, "exec": self.installerLST },
-            "evdev.xml": { "from": "rules/evdev",         "to": "rules/evdev", "ext": ".xml", "marks": [ "<name>vitriol</name>" ],          "checked": False, "exec": self.installerXML },
-            "base.lst":  { "from": "rules/evdev",         "to": "rules/base",  "ext": ".lst", "marks": [ "vitriol" ],                       "checked": False, "exec": self.installerLST },
-            "base.xml":  { "from": "rules/evdev",         "to": "rules/base",  "ext": ".xml", "marks": [ "<name>vitriol</name>" ],          "checked": False, "exec": self.installerXML },
-            "symbol.br": { "from": "symbols/vitriol.xkb", "to": "symbols/br",  "ext": "",     "marks": [ "// <vitriol>", "// </vitriol>" ], "checked": False, "exec": self.installerSymbol },
+            "evdev.lst": { "from": "rules/evdev",    "to": "rules/evdev", "ext": ".lst", "marks": [ "vitriol"                       ], "checked": False, "exec": self.installerLST    },
+            "evdev.xml": { "from": "rules/evdev",    "to": "rules/evdev", "ext": ".xml", "marks": [ "<name>vitrioles</name>"        ], "checked": False, "exec": self.installerXML    },
+            "base.lst":  { "from": "rules/evdev",    "to": "rules/base",  "ext": ".lst", "marks": [ "vitriol"                       ], "checked": False, "exec": self.installerLST    },
+            "base.xml":  { "from": "rules/evdev",    "to": "rules/base",  "ext": ".xml", "marks": [ "<name>vitrioles</name>"        ], "checked": False, "exec": self.installerXML    },
+            "symbol.br": { "from": "symbols/br.xkb", "to": "symbols/br",  "ext": "",     "marks": [ "// <vitriol>", "// </vitriol>" ], "checked": False, "exec": self.installerSymbol },
         }
         self.args = self.parser.parse_args()
         {
@@ -133,14 +148,14 @@ class Application:
 
             orig = self.read(fragment)
             file = self.read(target)
-
             if not self.source["evdev.lst"]["marks"][0] in file:
+                regExprComp = re.compile(r'^.*nativo .* br: Portuguese \(Brazil,.*$')
                 for line in file:
-                    found = re.search("^.*nativo .* br: Portuguese (Brazil,.*$", line)
+                    found = regExprComp.search(line)
                     if found:
-                        file.insert(file.index(line), orig[0])
-                        print (file[file.index(line) - 5: file.index(line) + 5])
+                        file.insert(file.index(line), ''.join(orig))
                         break
+
                 open(target, "w", encoding="utf-8").writelines(file)
 
         print("- LST files installed.")
@@ -150,17 +165,19 @@ class Application:
     def installerXML(self, target, fragment):
         """Installer for XML files.
         """
-        if not [line for line in open(target, encoding="utf-8") if re.search("^.*vitriol.*$", line)]:
+        found = [line for line in open(target, encoding="utf-8") if re.search("^.*vitriol.*$", line)]
+        if self.force or not found:
             if self.simulate:
                 print(f"- {target} not installed.")
                 return
 
-            orig = ET.parse(fragment)
+            orig = self.getSymbols(target)
             tree = ET.parse(target)
             root = tree.getroot()
 
             for model_list in root.findall(".//name/[.='br']../..variantList"):
-                model_list.insert(0, orig.getroot())
+                model_list.clear()
+                model_list.insert(0, orig)
 
             tree.write(target)
 
@@ -188,10 +205,34 @@ class Application:
             print(f"Name and rules: {name} {rules}.")
         return f"{self.args.target}/{rules['to']}{rules['ext']}"
 
+    def getSymbols(self, target):
+        symbols = f"{self.args.target}/{self.source['symbol.br']['to']}"
+        updates = f"install/{self.source['symbol.br']['from']}"
+        content = open(symbols, encoding="utf-8").read()
+        content+= open(updates, encoding="utf-8").read()
+        # content = re.sub(r'// <vitriol>.*?// </vitriol>', '', content, flags=re.DOTALL)
+        pattern = r'xkb_symbols\s+"([^"]+)"\s*\{[^}]*?name\[Group1\]="([^"]+)"'
+        matches = re.findall(pattern, content)
+        results = [{"name": name, "description": description} for name, description in matches]
+
+        variants = ET.Element("variants")
+
+        for item in results:
+            variant = ET.SubElement(variants, "variant")
+            xmlNode = ET.SubElement(variant, "configItem")
+            name    = ET.SubElement(xmlNode, "name")
+            name.text = item["name"]
+            description = ET.SubElement(xmlNode, "description")
+            description.text = item["description"]
+
+        xml_string = ET.tostring(variants, encoding="unicode")
+        return xml_string
+
 
 
     simulate = False
     verbose  = False
+    force    = False
 
 
 
@@ -200,6 +241,7 @@ class Application:
         """
         self.simulate = True
         self.verbose  = False
+        self.force    = False
         self.install()
 
 

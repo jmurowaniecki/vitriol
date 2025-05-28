@@ -14,8 +14,6 @@ xkb_symbols "vitriolic" {
     modifier_map Control { Control_L, Control_R };
     modifier_map Mod3    { ISO_Level5_Shift     };
 
-
-
     key <AD01> { [ q           , Q              , U1F700         , U1F763         ] }; // 🜀 🝣
     key <AD02> { [ w           , W              , U1F762         , U1F764         ] }; // 🝢 🝤
     key <AD03> { [ e           , E              , Greek_PSI      , Greek_SIGMA    ] }; // Ψ Σ
@@ -35,7 +33,7 @@ xkb_symbols "vitriolic" {
     key <AC04> { [ f           , F              , U1F75F         , U1F75E         ] }; // 🝟 🝞
     key <AC04> { [ g           , G              , U1F75F         , U1F75E         ] }; // ŋ Ŋ
     key <AC06> { [ h           , H              , U02661         , U02665         ] }; // ♡ ♥
-    key <AC06> { [ j           , j              , U02661         , U02665         ] }; // ̉ ̛
+    key <AC06> { [ j           , J              , U02661         , U02665         ] }; // ̉ ̛
     key <AC06> { [ k           , K              , U02661         , U02665         ] }; // ĸ &
     key <AC09> { [ l           , L              , U1F76A         , U02644         ] }; // 🝪 ♄
     key <AC10> { [ ccedilla    , Ccedilla       , U026E2         , U02646         ] }; // ⛢ ♆

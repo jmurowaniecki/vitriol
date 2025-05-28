@@ -37,7 +37,7 @@ xkb_symbols "vitrioles" {
     key <AC04> { [ f           , F              , U1F75F         , U1F75E         ] }; // 🝟 🝞
     key <AC05> { [ g           , G              , U02648         , U02649         ] }; // ♈ ♉
     key <AC06> { [ h           , H              , U0264A         , U0264B         ] }; // ♊ ♋
-    key <AC07> { [ j           , j              , U0264C         , U0264D         ] }; // ♌ ♍
+    key <AC07> { [ j           , J              , U0264C         , U0264D         ] }; // ♌ ♍
     key <AC08> { [ k           , K              , U0264E         , U0264F         ] }; // ♎ ♏
     key <AC09> { [ l           , L              , U02650         , U02651         ] }; // ♐ ♑
     key <AC10> { [ ccedilla    , Ccedilla       , U02652         , U02653         ] }; // ♒ ♓

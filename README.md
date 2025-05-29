@@ -30,12 +30,12 @@ yay -Syu unicode-emoji python3
 apk add unicode-character-database python3
 ```
 
+<img src="./doc/assets/fontes.png" align=left />
 
 ## Instalação
 
 O processo de instalação automatizada pode ser executado usando os comandos `make install` ou executando o arquivo `install.py`. Certifique-se de ter os privilégios para alterar os arquivos de sistema (ou utilizar `sudo` para esse fim).
 
-<img src="./doc/assets/fontes.png" align=left />
 
 ## Instalação Manual
 

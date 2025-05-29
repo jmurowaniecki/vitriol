@@ -1,6 +1,26 @@
-        <variant>
-          <configItem>
-            <name>vitriol</name>
-            <description>Portuguese (Brazil, Esoteric)</description>
-          </configItem>
-        </variant>
+<variants>
+  <variant>
+    <configItem>
+      <name>vitrioles</name>
+      <description>Portuguese (Brazil, Esoteric)</description>
+    </configItem>
+  </variant>
+  <variant>
+    <configItem>
+      <name>vitriolas</name>
+      <description>Portuguese (Brazil, Astrologic)</description>
+    </configItem>
+  </variant>
+  <variant>
+    <configItem>
+      <name>vitriolic</name>
+      <description>Portuguese (Brazil, Juvelic)</description>
+    </configItem>
+  </variant>
+  <variant>
+    <configItem>
+      <name>vitriolma</name>
+      <description>Portuguese (Brazil, Mathematical)</description>
+    </configItem>
+  </variant>
+</variants>

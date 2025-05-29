@@ -1,0 +1,76 @@
+//
+// Mathematical keyboard layout
+//    by John Murowaniecki
+// <jmurowaniecki @ gmail.com>
+//
+partial alphanumeric_keys
+xkb_symbols "vitriolma" {
+
+    include "br(abnt2)"
+    name[Group1]="Portuguese (Brazil, Mathematical)";
+    key.type[group1]="EIGHT_LEVEL";
+
+    modifier_map Shift   { Shift_L  , Shift_R   };
+    modifier_map Lock    { Caps_Lock, ISO_Lock  };
+    modifier_map Control { Control_L, Control_R };
+    modifier_map Mod3    { ISO_Level5_Shift     };
+
+    // https://symbl.cc/pt/unicode/blocks/mathematical-operators/
+    // https://en.wikipedia.org/wiki/Greek_letters_used_in_mathematics,_science,_and_engineering
+    // https://en.wikipedia.org/wiki/List_of_logic_symbols
+
+    key <AE01> { [ 1           , exclamation    , U000a1         , U026A0         ] }; // ¡ Exclamação invertida                 | ⚠ Exclamação em triângulo
+    key <AE02> { [ 2           , at             , U0221a         , U02591         ] }; // √ Raiz quadrada                        | ░ Sombra clara
+    key <AE03> { [ 3           , numbersign     , U0221b         , U02592         ] }; // ∛ Raiz cúbica                          | ▒ Sombra média
+    key <AE04> { [ 4           , dollar         , U0221c         , U02593         ] }; // ∜ Quarta Raiz                          | ▓ Sombra escura
+    key <AE05> { [ 5           , percent        , U022ba         , U022bb         ] }; // ⊺ Intercalar                           | ⊻ Xor
+    key <AE06> { [ 6           , dead_diaeresis , U000ac         , U02200         ] }; // ¬ Negação                              | ∀ Para todos
+    key <AE07> { [ 7           , ampersand      , U022bc         , U022bd         ] }; // ⊼ Nand                                 | ⊽ Nem
+    key <AE08> { [ 8           , asterisk       , U02258         , U02259         ] }; // ≘ Corresponde a                        | ≙ Estimativas
+    key <AE09> { [ 9           , parenleft      , U02282         , U02283         ] }; // ⊂ Subconjunto de                       | ⊃ Superconjunto De
+    key <AE10> { [ 0           , parenright     , U02205         , U02194         ] }; // ∅ Conjunto vazio                       | ↔ Equivalência bicondicional
+    key <AE11> { [ minus       , underscore     , U02261         , U02262         ] }; // ≡ Idêntico a                           | ≢ Não é idêntico a
+    key <AE12> { [ equal       , plus           , U02213         , U02260         ] }; // ∓ Sinal de menos ou mais               | ≠ Não é igual a
+
+    key <AD01> { [ q           , Q              , U02660         , U02661         ] }; // ♠                                      | ♡
+    key <AD02> { [ w           , W              , U02662         , U02663         ] }; // ♢                                      | ♣
+    key <AD03> { [ e           , E              , U02208         , U02209         ] }; // ∈ Elemento de                          | ∉ Não é um elemento de
+    key <AD04> { [ r           , R              , registered     , U02203         ] }; // ® Registrado                           | ∃ Existe
+    key <AD05> { [ t           , T              , U0220b         , U0220c         ] }; // ∋ Contém como um membro                | ∌ Não contém como membro
+    key <AD06> { [ y           , Y              , U003BB         , U02204         ] }; // λ Letra Grega Lambda                   | ∄ Não existe
+    key <AD08> { [ u           , U              , U02229         , U0222a         ] }; // ∩ Interseção                           | ∪ União
+    key <AD08> { [ i           , I              , U0221e         , U02190         ] }; // ∞ Infinito                             |
+    key <AD10> { [ o           , O              , U02660         , U02263         ] }; // ø                                      | ≣ Estritamente Equivalente a
+    key <AD10> { [ p           , P              , U021D4         , Greek_pi       ] }; // ⇔ Equivalência bidirecional            | π Letra Grega Pi
+    key <AD11> { [ dead_acute  , dead_grave     , U022c2         , U022c3         ] }; // ⋂ Interseção N-Ary                     | ⋃ União N-Ary
+    key <AD12> { [ bracketleft , braceleft      , ordfeminine    , U02701         ] }; // ª Ordinal feminino                     | ✁ Tesoura
+
+    key <AC01> { [ a           , A              , U0221d         , AE             ] }; // ∝ Proporcional a                       | Æ Letra grega "fi" ou Conjunto vazio
+    key <AC02> { [ s           , S              , U0222b         , Greek_SIGMA    ] }; // ∫ Integrante                           | Σ Letra grega Sigma
+    key <AC03> { [ d           , D              , U02202         , Greek_DELTA    ] }; // ∂ Diferencial Parcial                  | Δ Legra grega Delta
+    key <AC04> { [ f           , F              , U02659         , U0265F         ] }; // ♙ Peão Branco                          | ♟ Peão Preto
+    key <AC05> { [ g           , G              , U02654         , U0265A         ] }; // ♔ Rei Branco                           | ♚ Rei Preto
+    key <AC06> { [ h           , H              , U02655         , U0265B         ] }; // ♕ Rainha Branco                        | ♛ Rainha Preto
+    key <AC07> { [ j           , J              , U02656         , U0265C         ] }; // ♖ Torre Branco                         | ♜ Torre Preto
+    key <AC08> { [ k           , K              , U02657         , U0265D         ] }; // ♗ Bispo Branco                         | ♝ Bispo Preto
+    key <AC09> { [ l           , L              , U02658         , U0265E         ] }; // ♘ Cavalo Branco                        | ♞ Cavalo Preto
+    key <AC10> { [ ccedilla    , Ccedilla       , U022c0         , U022c1         ] }; // ⋀ N-Ary Lógico E                       | ⋁ N-Ary Lógico OU
+    key <AC11> { [ dead_tilde  , dead_circumflex, U02227         , U02228         ] }; // ∧ Lógico E                             | ∨ Lógico OU
+    key <AC12> { [ bracketright, braceright     , masculine      , U0270E         ] }; // º Ordinal masculino                    | ✎ Lápis
+
+    key <AB01> { [ z           , Z              , U1F76A         , U1F71A         ] }; // 🝪                                      | 🝫
+    key <AB02> { [ x           , X              , U1F70F         , U1F70E         ] }; // 🜏 Enxofre alquímico                    | 🜎 Enxofre filosofal
+    key <AB03> { [ c           , C              , copyright      , U02201         ] }; // © Copyright                            | ∁ Complemento
+    key <AB04> { [ v           , V              , U0274D         , U0274F         ] }; // ❍ Círculo branco sombreado             | ❏ Quadrado branco sombreado
+    key <AB05> { [ b           , B              , Greek_BETA     , Greek_phi      ] }; // Β Letra Grega Beta                     | φ Letra Grega Phi
+    key <AB06> { [ n           , N              , U0220f         , U02210         ] }; // ∏ Produto N-Ary                        | ∐ Coproduto N-Ary
+    key <AB07> { [ m           , M              , mu             , Greek_OMEGA    ] }; // µ Letra Grega Mu                       | Ω Letra Graga Ômega
+    key <AB08> { [ comma       , less           , U02264         , U1F708         ] }; // ≤ Menos que ou igual a                 | 🜈
+    key <AB09> { [ period      , greater        , U02265         , U02235         ] }; // ≥ Maior que ou igual a                 | ∵ Porque
+    key <AB10> { [ semicolon   , colon          , ellipsis       , therefore      ] }; // … Elipse                               | ∴ Assim sendo
+    key <AB11> { [ slash       , question       , U1F714         , U1F715         ] }; // 🜔                                      | 🜕
+    key <LSGT> { [ backslash   , bar            , U1F729         , U1F72B         ] }; // 🜩                                      | 🜫
+
+    key <BKSP> { [ BackSpace   , BackSpace      , U0220e         , U026E7         ] }; // ∎ Fim da prova                         | ⛧
+    key  <TAB> { [ Tab         , ISO_Left_Tab   , U0269A         , U02695         ] }; // ⚚                                      | ⚕
+};

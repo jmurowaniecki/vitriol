@@ -1,0 +1,16 @@
+// Astrologic keyboard layout
+//    by John Murowaniecki
+// <jmurowaniecki @ gmail.com>
+//
+partial alphanumeric_keys
+xkb_symbols "vitriolas" {
+
+    include "br(abnt2)"
+    name[Group1]="Portuguese (Brazil, Astrologic)";
+    key.type[group1]="EIGHT_LEVEL";
+
+    modifier_map Shift   { Shift_L  , Shift_R   };
+    modifier_map Lock    { Caps_Lock, ISO_Lock  };
+    modifier_map Control { Control_L, Control_R };
+    modifier_map Mod3    { ISO_Level5_Shift     };
+};

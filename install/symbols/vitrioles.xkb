@@ -1,0 +1,75 @@
+//
+//   Esoteric keyboard layout
+//    by John Murowaniecki
+// <jmurowaniecki @ gmail.com>
+//
+partial alphanumeric_keys
+xkb_symbols "vitrioles" {
+
+    include "br(abnt2)"
+    name[Group1]="Portuguese (Brazil, Esoteric)";
+    key.type[group1]="EIGHT_LEVEL";
+
+    modifier_map Shift   { Shift_L  , Shift_R   };
+    modifier_map Lock    { Caps_Lock, ISO_Lock  };
+    modifier_map Control { Control_L, Control_R };
+    modifier_map Mod3    { ISO_Level5_Shift     };
+
+    // key <RCTRL> { [ Meta_R ] };
+    // for future reference
+
+    key <AD01> { [ q           , Q              , U1F700         , U1F763         ] }; // 🜀 🝣
+    key <AD02> { [ w           , W              , U1F762         , U1F764         ] }; // 🝢 🝤
+    key <AD03> { [ e           , E              , Greek_PSI      , Greek_SIGMA    ] }; // Ψ Σ
+    key <AD04> { [ r           , R              , registered     , U1F732         ] }; // ® 🜲        # 001
+    key <AD05> { [ t           , T              , U02625         , U02628         ] }; // ☥ ☨
+    key <AD06> { [ y           , Y              , U003BB         , U1F709         ] }; // λ 🜉
+    key <AD08> { [ u           , U              , U02191         , U02193         ] }; // ↓ ↑
+    key <AD08> { [ i           , I              , U02192         , U02190         ] }; // → ←
+    key <AD10> { [ o           , O              , U02660         , U10348         ] }; // ø 𐍈
+    key <AD10> { [ p           , P              , U02627         , Greek_pi       ] }; // ☧ π        # 001
+    key <AD11> { [ dead_acute  , dead_grave     , U1F701         , U1F702         ] }; // 🜁 🜂
+    key <AD12> { [ bracketleft , braceleft      , ordfeminine    , U1F71B         ] }; // ª 🜛        # 001
+
+    key <AC01> { [ a           , A              , U1F707         , AE             ] }; // 🜇 Æ
+    key <AC02> { [ s           , S              , U02620         , U02600         ] }; // ☠ ☀
+    key <AC03> { [ d           , D              , U1F760         , Greek_DELTA    ] }; // 🝠 Δ
+    key <AC04> { [ f           , F              , U1F75F         , U1F75E         ] }; // 🝟 🝞
+    key <AC05> { [ g           , G              , U02648         , U02649         ] }; // ♈ ♉
+    key <AC06> { [ h           , H              , U0264A         , U0264B         ] }; // ♊ ♋
+    key <AC07> { [ j           , J              , U0264C         , U0264D         ] }; // ♌ ♍
+    key <AC08> { [ k           , K              , U0264E         , U0264F         ] }; // ♎ ♏
+    key <AC09> { [ l           , L              , U02650         , U02651         ] }; // ♐ ♑
+    key <AC10> { [ ccedilla    , Ccedilla       , U02652         , U02653         ] }; // ♒ ♓
+    key <AC11> { [ dead_tilde  , dead_circumflex, U1F703         , U1F704         ] }; // 🜃 🜄
+    key <AC12> { [ bracketright, braceright     , masculine      , U1F71B         ] }; // º 🜛        # 001
+
+    key <AB01> { [ z           , Z              , U1F76A         , U1F71A         ] }; // 🝪 🜚
+    key <AB02> { [ x           , X              , U1F70F         , U1F70E         ] }; // 🜏 🜎
+    key <AB03> { [ c           , C              , copyright      , U1F767         ] }; // © 🝧        # 001
+    key <AB04> { [ v           , V              , U1F705         , U1F706         ] }; // 🜅 🜆
+    key <AB05> { [ b           , B              , Greek_BETA     , Greek_phi      ] }; // Β φ
+    key <AB06> { [ n           , N              , U00418         , U1F76D         ] }; // И 🝭
+    key <AB07> { [ m           , M              , mu             , Greek_OMEGA    ] }; // µ Ω
+    key <AB08> { [ comma       , less           , U1F441         , U1F708         ] }; // 👁 🜈
+    key <AB09> { [ period      , greater        , periodcentered , U1F728         ] }; // · 🜨
+    key <AB10> { [ semicolon   , colon          , ellipsis       , therefore      ] }; // … ∴
+    key <AB11> { [ slash       , question       , U1F714         , U1F715         ] }; // 🜔 🜕
+    key <LSGT> { [ backslash   , bar            , U1F729         , U1F72B         ] }; // 🜩 🜫
+
+    key <AE01> { [ 1           , exclamation    , U02609         , U0263C         ] }; // ☉ ☼
+    key <AE02> { [ 2           , at             , U0263F         , U02638         ] }; // ☿ ☸
+    key <AE03> { [ 3           , numbersign     , U02640         , U026B3         ] }; // ♀ ⚳
+    key <AE04> { [ 4           , dollar         , U02641         , U026B4         ] }; // ♁ ⚴
+    key <AE05> { [ 5           , percent        , U02642         , U026B5         ] }; // ♂ ⚵
+    key <AE06> { [ 6           , dead_diaeresis , U02643         , U026B6         ] }; // ♃ ⚶
+    key <AE07> { [ 7           , ampersand      , U02644         , U026B7         ] }; // ♄ ⚷
+    key <AE08> { [ 8           , asterisk       , U02645         , U026B8         ] }; // ♅ ⚸
+    key <AE09> { [ 9           , parenleft      , U02646         , U1F75C         ] }; // ♆ 🝜
+    key <AE10> { [ 0           , parenright     , U02647         , U1F739         ] }; // ♇ 🜹
+    key <AE11> { [ minus       , underscore     , U026E2         , U1F713         ] }; // ⛢ 🜓
+    key <AE12> { [ equal       , plus           , U1F707         , U1F708         ] }; // 🜇 🜈
+
+    key <BKSP> { [ BackSpace   , BackSpace      , U026E4         , U026E7         ] }; // ⛤ ⛧
+    key  <TAB> { [ Tab         , ISO_Left_Tab   , U0269A         , U02695         ] }; // ⚚ ⚕
+};

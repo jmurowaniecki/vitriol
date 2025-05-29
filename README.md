@@ -1,126 +1,100 @@
-# **V·I·T·R·I·O·L** <img align="right" src="https://img.shields.io/github/v/tag/jmurowaniecki/vitriol?sort=semver&style=flat-square" />
+# ![V·I·T·R·I·O·L][vitriol.png]
+<img align="right" src="https://img.shields.io/github/v/tag/jmurowaniecki/vitriol?sort=semver&style=flat-square" />
 
-![Leiaute de teclas mapeadas][keyboard.png]
+<!-- by Ioxn Ioannes Vicarius Umbrae. -->
 
-<!--
-@TODO: Review install process.
-![](https://img.shields.io/badge/ubuntu-building-green?style=for-the-badge&logo=ubuntu)
-![](https://img.shields.io/badge/arch-building-green?style=for-the-badge&logo=arch-linux)
-![](https://img.shields.io/badge/debian-building-green?style=for-the-badge&logo=debian)
-![](https://img.shields.io/badge/slackware-building-green?style=for-the-badge&logo=slackware)
-![](https://img.shields.io/badge/linuxmint-failure-red?style=for-the-badge&logo=linuxmint)
-![](https://img.shields.io/badge/popOS-failure-red?style=for-the-badge&logo=popOS)
--->
+**V.I.T.R.I.O.L.¹** é um mapeamento simbólico para layouts de teclado baseados em X11 para todos aqueles que precisam de caracteres com simbologia astronômica, astrológica, alquímica, matemática e/ou de gênero diverso - **simbologia Juvélica²**.
 
-**V.I.T.R.I.O.L.¹** é um mapeamento simbólico para layouts de teclados baseados em sistemas X11 para todos aqueles que necessitam de caracteres com simbologia astronômica, astrológica, alquímica, matemática e/ou de **diversidade gênero e simbologia juvélica**².
+Esta biblioteca visa contribuir com recursos de fácil e rápido acesso para estudos e publicações, não apenas para os casos mencionados acima. Se você precisar de um mapeamento específico e/ou tiver alguma ideia, dúvida, crítica ou sugestão, sinta-se à vontade para entrar em contato conosco e/ou abrir uma issue, pull request ou até mesmo fazer um fork deste projeto.
 
-Esta biblioteca visa contribuir para os estudos e publicações não apenas dos casos citados acima, se você necessitar de um mapeamento específico e/ou tiver alguma ideia, dúvida, crítica ou sugestão sinta-se a vontade para contatar e/ou abrir uma issue, pull request ou até mesmo realizar um fork deste projeto.
+<small>
+  ¹ : Significa literalmente <i><b>"Visita Interiora Terrae, Rectificando, Invenies Occultum Lapidem."</b> - visite o centro da Terra, retificando-se, você encontrará a pedra escondida</i>.
 
-
-> ¹ : Significa literalmente _"Visita Interiora Terrae, Rectificando, Invenies Occultum Lapidem."_
-
-> ² : Não está completo, mas já é um _work-in-progress_.
+  ² : Não está completo (ainda), mas é um trabalho em andamento.
+</small>
 
 
 
 ## Requisitos
-
-Certifique-se de que seu sistema está com o pacote `unicode` (da seção `utils`) e `ttf-ancient-fonts` instalado e atualizado.
+Certifique-se de que seu sistema tenha o pacote `unicode` (da seção `utils`), `ttf-ancient-fonts` e Python v3 instalados e atualizados.
 
 ```sh
 # Ubuntu
-sudo apt update && sudo apt install unicode ttf-ancient-fonts
+sudo apt update && \
+sudo apt install unicode ttf-ancient-fonts python3
 
 # Arch
-yay -Syu unicode-emoji
+yay -Syu unicode-emoji python3
 
 # Alpine
-apk add unicode-character-database
+apk add unicode-character-database python3
 ```
-
 
 
 ## Instalação
 
-Adicione o conteúdo do arquivo `evdev.lst` à seção `! variant` do arquivo `/usr/share/X11/xkb/rules/evdev.lst`, e ao `evdev.xml` para sua `variantList` correspondente na seção **BR** do arquivo `/usr/share/X11/xkb/rules/evdev.xml`.
+O processo de instalação automatizada pode ser executado usando os comandos `make install` ou executando o arquivo `install.py`. Certifique-se de ter os privilégios para alterar os arquivos de sistema (ou utilizar `sudo` para esse fim).
 
-Então finalmente adicione o arquivo `vitriol.xkb` ao seu arquivo de símbolos `/usr/share/X11/xkb/symbols/br`.
+<img src="./doc/assets/fontes.png" align=left />
 
-Após realizar a instalação é necessário reiniciar sua sessão X11 (fazer logout).
+## Instalação Manual
 
-> Você também pode realizar esses procedimentos de forma automática com o comando `make install`.
+Adicione o conteúdo do arquivo `evdev.lst` à seção `!variant` do arquivo `/usr/share/X11/xkb/rules/evdev.lst` e ao arquivo `evdev.xml` para a sua `variantList` correspondente na seção **BR** do arquivo `/usr/share/X11/xkb/rules/evdev.xml`.
 
+Por fim, adicione o arquivo `install/symbols/br.xkb` (ou algum dos layouts específicos) ao seu arquivo de símbolos `/usr/share/X11/xkb/symbols/br`.
 
-
-## Primeiros passos
-
-1.  Realize a instalação utilizando os passo do **Makefile**: `make install`;
-2.  Abra as configurações do seu sistema e vá para **`Linguagem / Configuração de teclados`**;
-3.  Selecione o mapeamento **Portuguese (Brazil, Esoteric)** desejado;
-4.  Pressione **` Alt Gr. `** + **` Shift `** + **` ; `** para imprimir o caractere ' **` ∴ `** '.
-5.  Saiba que eventuais atualizações do sistema sobreescreverão suas configurações, sendo necessário eventualmente repetir o processo de instalação.
+Após realizar a instalação, você **precisa** reiniciar sua sessão X11.
 
 
-> Se você e interessa em teclas customizadas e/ou impressas dê uma [olhada aqui][max-keyboard-url].
-\
-\
-> Se você quer fazer um teclado customizado utilizando Arduino [isso aqui pode te ajudar][diy-with-arduino].
-\
-\
-> Devido a erros renderizando os caracteres _Level 3, Super_ ou _Meta_ utilizando o programa `draw-key` de [gkbd-keyboard-drawing](https://github.com/GNOME/libgnomekbd/blob/master/libgnomekbd/gkbd-keyboard-drawing.c) algumas teclas e seus valores podem ter sido renderizadas e posicionadas manualmente no teclado de exemplo.
+## Primeiros Passos
+
+1. Execute a instalação seguindo os passos do **Makefile**: `make install`;
+2. Abra as configurações do sistema e vá em **`Idioma / Configurações de Teclado`**;
+3. Selecione o mapeamento **Português (Brasil, Esotérico)** desejado;
+4. Para testar, pressione **` Alt Gr. `** + **` X `** para imprimir o caractere ' **` 🜏 `** '.
+
+<small>Esteja ciente de que qualquer atualização do sistema poderá substituir suas configurações e que talvez seja necessário repetir o processo de instalação após atualizar o sistema.</small>
 
 
+## Mapeamentos
 
-## Diversidade de gênero e termos juvélicos
+Devido à constante necessidade de utilização de símbolos esotéricos, astrológicos e juvélicos, bem como à extensão dos símbolos em uso, tornou-se necessário subdividir em mapeamentos individuais para atender às necessidades simbólicas do trabalho realizado.
 
-Símbolo | Combinação de teclas | Identidade de gênero e/ou Orientação sexual
-:------:|---------------------:|---------------------------------------------
- `♀` | ` Shift ` ` AltGr ` **` [ `** | Gênero **Feminino**
- `♂` | ` Shift ` ` AltGr ` **` ] `** | Gênero **Masculino**
- `⚧` | ` Shift ` ` AltGr ` **` ´ `** | Gênero **transgênero**
- `⚦` | ` AltGr ` **` = `** | Gênero **transgênero** **Masculino**
- `⚥` | ` AltGr ` ` Shift ` **` - `** | Gênero **bigênero**<br>Também chamado **bigender**, **Cis**, **intersex** representado por um símbolo masculino + feminino.
- `☿` | ` Shift ` ` AltGr ` **` ~ `** | Gênero **intersexo** ou **intergênero**
- `⊕` | ` Shift ` ` AltGr ` **` . `** | Gênero **ipsogênero**<br>_Pessoa que se identifica completamente - e pela vida inteira - com o **mesmo gênero** designado em sua nascença._
- `🞵` | ` Shift ` ` AltGr ` **` = `** | Gênero **não-binárie**
- `⚨` | ![][TODO] | Gênero **andrógine**<br>Ou também **transgênero** **Feminino**.
- `⚲` | ![][TODO] | Gênero **neutrois/gênero neutro**<br>Também chamada **genderless**, **sem gênero**
- `○` | ![][TODO] | Gênero **agênero**
- `⚩` | ![][TODO] | Gênero **aliagênero**<br>Também enquadrado como **não binário**.
- `⚴` | ![][TODO] | Gênero **neurogênero**
- `⚣` | ` AltGr ` **` ~ `** | **gay**
- `⚢` | ` AltGr ` **` ´ `** | **lésbica**
- `π`  | ` AltGr ` ` Shift ` **` P `** | **poliamorosa**
- `♠`  | ` AltGr ` **` P `** | **assexual**<br>Também interpretado como **arromântique/arromântico**.
- `☽︎☾︎` | ` AltGr ` **` 8 `** e, a seguir ` AltGr ` **` 0 `** | **bissexual**<br>Representado aqui por uma _`lua dupla`_.
- `⚤` | ![][TODO] | **bissexual**
- `ꉣ`  | ![][TODO] | **panssexual**
- `☀︎︎`  | ![][TODO] | **panssexual**
- `➴`  | ![][TODO] | **arromântique**
+### Layout Esotérico
+![Mapped key layout][kbd-vitriol-es]
 
-<!--
-Símbolo|Combinação de teclas|Status do relacionamento
-:-----:|:-----------:|---
-` ⚯ ` | ![][TODO] | Namorando
-` ⚭ ` | ![][TODO] | Casado
-` ⚮ ` | ![][TODO] | Divorciado
--->
+### Layout Matemático
+![Mapped key layout][kbd-vitriol-ma]
 
-> Fontes e artigos:
-[O que voce precisa saber sobre o i em lgbti no dia da visibilidade intersexual](https://www.grupodignidade.org.br/intersex-o-que-voce-precisa-saber-sobre-o-i-em-lgbti-no-dia-da-visibilidade-intersexual/),
-[Categorias relacionadas a genero](https://orientando.org/categorias-relacionadas-a-genero/) e
-[Gender symbols](http://www.cakeworld.info/transsexualism/gender-symbols).
+### Layout Juvélico
+![Mapped key layout][kbd-vitriol-ic]
 
-> O layout QWERTY foi projetado no século XIX. O Colemak é uma alternativa moderna aos layouts QWERTY e Dvorak, projetado para digitação por toque eficiente e ergonômica em inglês. [Veja mais sobre…](https://colemak.com/)
+### Layout Astrológico
+![Mapped key layout][kbd-vitriol-as]
 
 
+> Se você estiver interessado em teclas personalizadas e/ou impressas, dê uma olhada em [veja aqui][max-keyboard-url].
 
+> Se você quiser criar um teclado personalizado usando Arduino [isso pode te ajudar][diy-with-arduino].
+
+> Devido a erros na renderização dos caracteres _Level 3_, _Super_ ou _Meta_ usando o programa `draw-key` do [gkbd-keyboard-drawing](https://github.com/GNOME/libgnomekbd/blob/master/libgnomekbd/gkbd-keyboard-drawing.c), algumas teclas e seus valores podem ter sido renderizados e posicionados manualmente no teclado de exemplo.
+
+> [Veja a tabela de termos Juvelic - WIP](doc/TERMOS-JUVELICOS.md)
+
+> O layout QWERTY foi projetado no século XIX. Colemak é uma alternativa moderna aos layouts QWERTY e Dvorak, projetada para digitação eficiente e ergonômica em inglês. [Saiba mais sobre…](https://colemak.com/)
+
+> [Saiba mais sobre o protocolo XKB.](https://www.x.org/releases/X11R7.7/doc/kbproto/xkbproto.html)
+
+> Referência futura: https://shapecatcher.com/unicode/block/Gothic
 [](ASSETS)
 
-[ico-version]: https://img.shields.io/github/v/tag/jmurowaniecki/vitriol?sort=semver&style=flat-square
-
-[keyboard.png]: ./doc/assets/layout.png
-
+[ico-version     ]: https://img.shields.io/github/v/tag/jmurowaniecki/vitriol?sort=semver&style=flat-square
+[vitriol.png     ]: ./doc/assets/background.png
+[keyboard.png    ]: ./doc/assets/layout.png
+[kbd-vitriol-as  ]: ./doc/assets/layout-vitriolas.png
+[kbd-vitriol-es  ]: ./doc/assets/layout-vitrioles.png
+[kbd-vitriol-ic  ]: ./doc/assets/layout-vitriolic.png
+[kbd-vitriol-ma  ]: ./doc/assets/layout-vitriolma.png
 [max-keyboard-url]: https://www.maxkeyboard.com/
 [diy-with-arduino]: https://www.makeuseof.com/tag/make-custom-shortcut-buttons-arduino/
-[TODO]: https://img.shields.io/badge/atalho_de_teclas_-indefinido-violet?style=flat-square
+[TODO            ]: https://img.shields.io/badge/atalho_de_teclas_-indefinido-violet?style=flat-square

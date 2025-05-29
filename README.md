@@ -1,24 +1,22 @@
-# ![V·I·T·R·I·O·L][vitriol.png] <img align="right" src="https://img.shields.io/github/v/tag/jmurowaniecki/vitriol?sort=semver&style=flat-square" />
+# ![V·I·T·R·I·O·L][vitriol.png]
+<img align="right" src="https://img.shields.io/github/v/tag/jmurowaniecki/vitriol?sort=semver&style=flat-square" />
 
-![Mapped key layout][keyboard.png]
 <!-- by Ioxn Ioannes Vicarius Umbrae. -->
 
+**V.I.T.R.I.O.L.¹** é um mapeamento simbólico para layouts de teclado baseados em X11 para todos aqueles que precisam de caracteres com simbologia astronômica, astrológica, alquímica, matemática e/ou de gênero diverso - **simbologia Juvélica²**.
 
-**V.I.T.R.I.O.L.¹** is a symbolic mapping for X11-based keyboard layouts for all those who need characters with astronomical, astrological, alchemical, mathematical and/or gender-diverse symbology and also **Juvelic symbology²**.
+Esta biblioteca visa contribuir com recursos de fácil e rápido acesso para estudos e publicações, não apenas para os casos mencionados acima. Se você precisar de um mapeamento específico e/ou tiver alguma ideia, dúvida, crítica ou sugestão, sinta-se à vontade para entrar em contato conosco e/ou abrir uma issue, pull request ou até mesmo fazer um fork deste projeto.
 
-This library aims to contribute with easy and quick access resources for studies and publications, not only for the cases mentioned above.
+<small>
+  ¹ : Significa literalmente <i><b>"Visita Interiora Terrae, Rectificando, Invenies Occultum Lapidem."</b> - visite o centro da Terra, retificando-se, você encontrará a pedra escondida</i>.
 
-If you need a specific mapping and/or have any ideas, questions, criticisms or suggestions, feel free to contact us and/or open an issue, pull request or even fork this project.
-
-> ¹ : It literally means _**"Visita Interiora Terrae, Rectificando, Invenies Occultum Lapidem."** - visit the center of the Earth, by rectifying yourself, you will find the hidden stone_.
-
-> ² : It's not complete (yet), but it's a work-in-progress.
-
+  ² : Não está completo (ainda), mas é um trabalho em andamento.
+</small>
 
 
-## Requirements
 
-Make sure your system has the `unicode` package (from the `utils` section) and `ttf-ancient-fonts` and Python v3 installed and up to date.
+## Requisitos
+Certifique-se de que seu sistema tenha o pacote `unicode` (da seção `utils`), `ttf-ancient-fonts` e Python v3 instalados e atualizados.
 
 ```sh
 # Ubuntu
@@ -33,107 +31,68 @@ apk add unicode-character-database python3
 ```
 
 
-## Installation
+## Instalação
 
-The automated installation process can be performed using the `make install` commands or by running the `install.py` file.
-
-
-## Manual Installation
-
-Add the contents of the `evdev.lst` file to the `!variant` section of the `/usr/share/X11/xkb/rules/evdev.lst` file, and to `evdev.xml` for its corresponding `variantList` in the **BR** section of the `/usr/share/X11/xkb/rules/evdev.xml` file.
-
-Then finally add the `vitriol.xkb` file to your symbols file `/usr/share/X11/xkb/symbols/br`.
-
-After performing the installation you need to restart your X11 session (log out).
+O processo de instalação automatizada pode ser executado usando os comandos `make install` ou executando o arquivo `install.py`. Certifique-se de ter os privilégios para alterar os arquivos de sistema (ou utilizar `sudo` para esse fim).
 
 
-## Getting Started
+## Instalação Manual
 
-1. Perform the installation using the steps in the **Makefile**: `make install`;
-2. Open your system settings and go to **`Language / Keyboard settings`**;
-3. Select the desired **Portuguese (Brazil, Esoteric)** mapping;
-4. To test, press **` Alt Gr. `** + **` X `** to print the character ' **` 🜏 `** '.
+Adicione o conteúdo do arquivo `evdev.lst` à seção `!variant` do arquivo `/usr/share/X11/xkb/rules/evdev.lst` e ao arquivo `evdev.xml` para a sua `variantList` correspondente na seção **BR** do arquivo `/usr/share/X11/xkb/rules/evdev.xml`.
 
-> Be aware that any system updates will overwrite your settings, and you may need to repeat the installation process after updating the system.
+Por fim, adicione o arquivo `install/symbols/br.xkb` (ou algum dos layouts específicos) ao seu arquivo de símbolos `/usr/share/X11/xkb/symbols/br`.
 
-## Mappings
+Após realizar a instalação, você **precisa** reiniciar sua sessão X11.
 
-Due to the constant need to use esoteric, astrological and Juvelic symbols, as well as the extension of the symbols in use, it became necessary to subdivide into individual mappings to meet the symbolic needs of the work carried out.
 
-### Esoteric
+## Primeiros Passos
 
-  Code  |  Key           |  Shift + Key      |  AltGR + Key  |  AltGr + Shift + Key  | Obs.
---------|:--------------:|:-----------------:|:-------------:|:---------------------:|------
-\<AE01> | `1`            | `exclamation`     | `☉`           | `☼`                   | #001
-\<AE02> | `2`            | `at`              | `☿`           | `☸`                   | #001
-\<AE03> | `3`            | `numbersign`      | `♀`           | `⚳`                   | #001
-\<AE04> | `4`            | `dollar`          | `♁`           | `⚴`                   | #001
-\<AE05> | `5`            | `percent`         | `♂`           | `⚵`                   | #001
-\<AE06> | `6`            | `dead_diaeresis`  | `♃`           | `⚶`                   | #001
-\<AE07> | `7`            | `ampersand`       | `♄`           | `⚷`                   | #001
-\<AE08> | `8`            | `asterisk`        | `♅`           | `⚸`                   | #001
-\<AE09> | `9`            | `parenleft`       | `♆`           | `🝜`                  | #001
-\<AE10> | `0`            | `parenright`      | `♇`           | `🜹`                   | #001
-\<AE11> | `minus`        | `underscore`      | `⛢`           | `🜓`                  | #001
-\<AE12> | `equal`        | `plus`            | `🜇`          | `🜈`                   |
-\<AD01> | `q`            | `Q`               | `🜀`          | `🝣`                   |
-\<AD02> | `w`            | `W`               | `🝢`          | `🝤`                   |
-\<AD03> | `e`            | `E`               | `Ψ`           | `Σ`                   |
-\<AD04> | `r`            | `R`               | `®`           | `🜲`                   | # 001
-\<AD05> | `t`            | `T`               | `☥`           | `☨`                   |
-\<AD06> | `y`            | `Y`               | `λ`           | `🜉`                   |
-\<AD08> | `u`            | `U`               | `↓`           | `↑`                   |
-\<AD08> | `i`            | `I`               | `→`           | `←`                   |
-\<AD10> | `o`            | `O`               | `ø`           | `𐍈`                   |
-\<AD10> | `p`            | `P`               | `☧`           | `π`                   | # 001
-\<AD11> | `dead_acute`   | `dead_grave`      | `🜁`          | `🜂`                   |
-\<AD12> | `bracketleft`  | `braceleft`       | `ª`           | `🜛`                   | # 001
-\<AC01> | `a`            | `A`               | `🜇`          | `Æ`                   |
-\<AC02> | `s`            | `S`               | `☠`           | `☀`                   |
-\<AC03> | `d`            | `D`               | `🝠`          | `Δ`                   |
-\<AC04> | `f`            | `F`               | `🝟`          | `🝞`                   |
-\<AC05> | `g`            | `G`               | `♈`           | `♉`                   |
-\<AC06> | `h`            | `H`               | `♊`           | `♋`                   |
-\<AC07> | `j`            | `j`               | `♌`           | `♍`                   |
-\<AC08> | `k`            | `K`               | `♎`           | `♏`                   |
-\<AC09> | `l`            | `L`               | `♐`           | `♑`                   |
-\<AC10> | `ccedilla`     | `Ccedilla`        | `♒`           | `♓`                   |
-\<AC11> | `dead_tilde`   | `dead_circumflex` | `🜃`          | `🜄`                   |
-\<AC12> | `bracketright` | `braceright`      | `º`           | `🜛`                   |
-\<AB01> | `z`            | `Z`               | `🝪`          | `🜚`                   |
-\<AB02> | `x`            | `X`               | `🜏`          | `🜎`                   |
-\<AB03> | `c`            | `C`               | `©`           | `🝧`                   | # 001
-\<AB04> | `v`            | `V`               | `🜅`          | `🜆`                  |
-\<AB05> | `b`            | `B`               | `Β`           | `φ`                   |
-\<AB06> | `n`            | `N`               | `И`           | `🝭`                   |
-\<AB07> | `m`            | `M`               | `µ`           | `Ω`                   |
-\<AB08> | `comma`        | `less`            | `👁`           | `🜈`                  |
-\<AB09> | `period`       | `greater`         | `·`           | `🜨`                   |
-\<AB10> | `semicolon`    | `colon`           | `…`           | `∴`                   |
-\<AB11> | `slash`        | `question`        | `🜔`           | `🜕`                  |
-\<LSGT> | `backslash`    | `bar`             | `🜩`           | `🜫`                   |
-\<BKSP> | `BackSpace`    | `BackSpace`       | `⛤`           | `⛧`                   |
-\<TAB>  | `Tab`          | `ISO_Left_Tab`    | `⚚`           | `⚕`                   |
+1. Execute a instalação seguindo os passos do **Makefile**: `make install`;
+2. Abra as configurações do sistema e vá em **`Idioma / Configurações de Teclado`**;
+3. Selecione o mapeamento **Português (Brasil, Esotérico)** desejado;
+4. Para testar, pressione **` Alt Gr. `** + **` X `** para imprimir o caractere ' **` 🜏 `** '.
 
-> If you are interested in custom and/or printed keys take a [look here][max-keyboard-url].
+> Esteja ciente de que qualquer atualização do sistema poderá substituir suas configurações e que talvez seja necessário repetir o processo de instalação após atualizar o sistema.
 
-> If you want to make a custom keyboard using Arduino [this can help you][diy-with-arduino].
+## Mapeamentos
 
-> Due to errors rendering the _Level 3_, _Super_ or _Meta_ characters using the `draw-key` program from [gkbd-keyboard-drawing](https://github.com/GNOME/libgnomekbd/blob/master/libgnomekbd/gkbd-keyboard-drawing.c) some keys and their values ​​may have been rendered and positioned manually on the example keyboard.
+Devido à constante necessidade de utilização de símbolos esotéricos, astrológicos e juvélicos, bem como à extensão dos símbolos em uso, tornou-se necessário subdividir em mapeamentos individuais para atender às necessidades simbólicas do trabalho realizado.
 
-> [See the table of Juvelic terms - WIP](doc/TERMOS-JUVELICOS.md)
+### Layout Esotérico
+![Mapped key layout][kbd-vitriol-es]
 
-> The QWERTY layout was designed in the 19th century. Colemak is a modern alternative to the QWERTY and Dvorak layouts, designed for efficient and ergonomic touch typing in English. [Learn more about…](https://colemak.com/)
+### Layout Matemático
+![Mapped key layout][kbd-vitriol-ma]
 
-> [See more about the XKB protocol.](https://www.x.org/releases/X11R7.7/doc/kbproto/xkbproto.html)
+### Layout Juvélico
+![Mapped key layout][kbd-vitriol-ic]
 
-> Future reference https://shapecatcher.com/unicode/block/Gothic
+### Layout Astrológico
+![Mapped key layout][kbd-vitriol-as]
 
+
+> Se você estiver interessado em teclas personalizadas e/ou impressas, dê uma olhada em [veja aqui][max-keyboard-url].
+
+> Se você quiser criar um teclado personalizado usando Arduino [isso pode te ajudar][diy-with-arduino].
+
+> Devido a erros na renderização dos caracteres _Level 3_, _Super_ ou _Meta_ usando o programa `draw-key` do [gkbd-keyboard-drawing](https://github.com/GNOME/libgnomekbd/blob/master/libgnomekbd/gkbd-keyboard-drawing.c), algumas teclas e seus valores podem ter sido renderizados e posicionados manualmente no teclado de exemplo.
+
+> [Veja a tabela de termos Juvelic - WIP](doc/TERMOS-JUVELICOS.md)
+
+> O layout QWERTY foi projetado no século XIX. Colemak é uma alternativa moderna aos layouts QWERTY e Dvorak, projetada para digitação eficiente e ergonômica em inglês. [Saiba mais sobre…](https://colemak.com/)
+
+> [Saiba mais sobre o protocolo XKB.](https://www.x.org/releases/X11R7.7/doc/kbproto/xkbproto.html)
+
+> Referência futura: https://shapecatcher.com/unicode/block/Gothic
 [](ASSETS)
 
 [ico-version     ]: https://img.shields.io/github/v/tag/jmurowaniecki/vitriol?sort=semver&style=flat-square
-[vitriol.png     ]: ./doc/assets/vitriol.png
+[vitriol.png     ]: ./doc/assets/background.png
 [keyboard.png    ]: ./doc/assets/layout.png
+[kbd-vitriol-as  ]: ./doc/assets/layout-vitriolas.png
+[kbd-vitriol-es  ]: ./doc/assets/layout-vitrioles.png
+[kbd-vitriol-ic  ]: ./doc/assets/layout-vitriolic.png
+[kbd-vitriol-ma  ]: ./doc/assets/layout-vitriolma.png
 [max-keyboard-url]: https://www.maxkeyboard.com/
 [diy-with-arduino]: https://www.makeuseof.com/tag/make-custom-shortcut-buttons-arduino/
 [TODO            ]: https://img.shields.io/badge/atalho_de_teclas_-indefinido-violet?style=flat-square

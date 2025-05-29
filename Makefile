@@ -60,9 +60,9 @@ update: screenshots # Take screenshots from the keyboard layouts.
 screenshot-%: # Take a screenshot from the keyboard layout
 	@\
 	layout="br($(*))"; \
-	window="ptBR V.I.T.R.I.O.L."; \
+	window="ptBR V.I.T.R.I.O.L. $(*)"; \
 	assets=doc/assets/layout-$(*).png; \
-	gkbd-keyboard-display -l "$$layout" & screen="$$!"; sleep 1; \
+	gkbd-keyboard-display -l "$${layout}" & screen="$$!"; sleep 1; \
 	xdotool getactivewindow set_window --name "$${window}"; \
 	gnome-screenshot --window --file "./$${assets}" --delay 1; \
 	kill -9 "$${screen}"

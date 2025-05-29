@@ -1,5 +1,13 @@
 # Release notes
 
+## 2025-05-28
+Screenshots for new layouts added.
+Changing README with new contents.
+
+## 2025-05-23
+Dividing and organizing layout sheets into the Astrology, Esoteric, Juvelic and Mathematical groups.
+Adapting the Makefile and install.py installation files for multiple layouts.
+
 ## 2025-02-12
 Rearranging mappings to approximate alchemical signs, states and elements and similar symbology.
 

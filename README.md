@@ -35,6 +35,7 @@ apk add unicode-character-database python3
 
 O processo de instalação automatizada pode ser executado usando os comandos `make install` ou executando o arquivo `install.py`. Certifique-se de ter os privilégios para alterar os arquivos de sistema (ou utilizar `sudo` para esse fim).
 
+<img src="./doc/assets/fontes.png" align=left />
 
 ## Instalação Manual
 
@@ -52,7 +53,8 @@ Após realizar a instalação, você **precisa** reiniciar sua sessão X11.
 3. Selecione o mapeamento **Português (Brasil, Esotérico)** desejado;
 4. Para testar, pressione **` Alt Gr. `** + **` X `** para imprimir o caractere ' **` 🜏 `** '.
 
-> Esteja ciente de que qualquer atualização do sistema poderá substituir suas configurações e que talvez seja necessário repetir o processo de instalação após atualizar o sistema.
+<small>Esteja ciente de que qualquer atualização do sistema poderá substituir suas configurações e que talvez seja necessário repetir o processo de instalação após atualizar o sistema.</small>
+
 
 ## Mapeamentos
 

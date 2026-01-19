@@ -225,8 +225,9 @@ class Application:
             description = ET.SubElement(xmlNode, "description")
             description.text = item["description"]
 
-        xml_string = ET.tostring(variants, encoding="unicode")
-        return xml_string
+        # xml_string = ET.tostring(variants, encoding="unicode")
+        # return xml_string
+        return variants
 
 
 

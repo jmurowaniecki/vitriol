@@ -176,8 +176,7 @@ class Application:
             root = tree.getroot()
 
             for model_list in root.findall(".//name/[.='br']../..variantList"):
-                model_list.clear()
-                model_list.insert(0, orig)
+                model_list.extend(orig)
 
             tree.write(target)
 
@@ -192,7 +191,6 @@ class Application:
         if self.verbose:
             print(f"Name and rules: {name} {rules}.")
 
-        # return "%s%s%s" % (default_path, self.source[source]['from'], self.source[source]['ext'])
         return f"{default_path}{rules['from']}{rules['ext']}"
 
 
@@ -203,6 +201,7 @@ class Application:
         (name, rules) = target
         if self.verbose:
             print(f"Name and rules: {name} {rules}.")
+
         return f"{self.args.target}/{rules['to']}{rules['ext']}"
 
     def getSymbols(self, target):
@@ -214,20 +213,17 @@ class Application:
         pattern = r'xkb_symbols\s+"([^"]+)"\s*\{[^}]*?name\[Group1\]="([^"]+)"'
         matches = re.findall(pattern, content)
         results = [{"name": name, "description": description} for name, description in matches]
-
-        variants = ET.Element("variants")
+        rootvar = ET.Element("variantList")
 
         for item in results:
-            variant = ET.SubElement(variants, "variant")
+            variant = ET.SubElement(rootvar, "variant")
             xmlNode = ET.SubElement(variant, "configItem")
             name    = ET.SubElement(xmlNode, "name")
             name.text = item["name"]
             description = ET.SubElement(xmlNode, "description")
             description.text = item["description"]
 
-        # xml_string = ET.tostring(variants, encoding="unicode")
-        # return xml_string
-        return variants
+        return rootvar
 
 
 

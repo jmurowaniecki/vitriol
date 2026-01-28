@@ -28,12 +28,9 @@ FILES = $(RULES) \
 
 TARGETS = $(foreach destiny, $(FILES), $(wildcard $(TARGET)/$(destiny)))
 
-
-
 DEFAULT: help
 # For further information see `README.md`.
 #̣
-
 
 # Repository maintenance options:
 backup:
@@ -63,32 +60,33 @@ screenshot-%: # Take a screenshot from the keyboard layout
 	window="ptBR V.I.T.R.I.O.L. $(*)"; \
 	assets=doc/assets/layout-$(*).png; \
 	gkbd-keyboard-display -l "$${layout}" & screen="$$!"; sleep 1; \
-	xdotool getactivewindow set_window --name "$${window}"; \
+	xdotool getactivewindow   set_window   --name  "$${window}"; \
 	gnome-screenshot --window --file "./$${assets}" --delay 1; \
 	kill -9 "$${screen}"
 
 extract: # Extract existing variants in environment…
-	./install.py \
+	./install.py   \
 		update \
 		--target=$(TARGET)
 
 check: # Check environment…
-	./install.py \
+	./install.py  \
 		check \
 		--target=$(TARGET)
 
 #
 install: backup # Installs application.
-	./install.py \
+	./install.py    \
 		install \
 		--target=$(TARGET)
 
 #
 force: backup # Installs application.
-	./install.py \
+	./install.py    \
 		install \
 		--force \
 		--target=$(TARGET)
+
 #
 help: # Shows this help.
 	@\
@@ -100,7 +98,6 @@ help: # Shows this help.
 	FORMAT=(COND ? $(STR) : $(CMD)); \
 	printf(FORMAT, $$1, """"""$$2 ); \
 	}' $(MAKEFILE_LIST) | ($(HLP)))"
-
 
 #
 %:
